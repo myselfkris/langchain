@@ -1,0 +1,21 @@
+l=[38,27,43,3,9,82,10]
+r=merge_sort(l)
+print(r)
+
+def merge_sort(list):
+    le=len(l)
+    if le==1:
+        return l
+    if le%2=0:
+        l1=l[0:le/2]
+    else :
+        l1=l[0:(le-1)/2]
+    merge_sort(l1)
+    
+    
+
+def merge(right,left):
+    if len(right)==1:
+        return right
+    if len(right)>1:
+        

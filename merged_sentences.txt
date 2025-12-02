@@ -1,0 +1,1480 @@
+  Prepared by J.BENITA,AP/CSE,KARE  
+ 
+UNIT II PROCESS SCHEDULING  
+In computing,  a process  is the instance  of a computer  program  that is being  executed  by one or 
+many  threads.
+Scheduling  is important  in many  different  computer  environments. One of the 
+most  important  areas  of scheduling  is which  programs  will work  on the CPU.
+This task is 
+handled  by the Operating  System  (OS)  of the computer  and there  are many  different  ways  in 
+which  we can choose  to configure  programs.
+Process  schedulers  are fundamental  components  of operating  systems  responsible  for deciding  
+the order  in which  processes  are executed  by the CPU.
+In simpler  terms,  they manage  how the 
+CPU  allocates  its time among  multiple  tasks  or processes  that are competing  for its attention.
+In this article,  we are going  to discuss  
+What  is Proces s Scheduling?
+Process  scheduling  is the activity  of the process  manager  that handles  the removal  of the 
+running  process  from  the CPU  and the selection  of another  process  based  on a particular  
+strategy.
+Process  scheduling  is an essential  part of a Multiprog ramming  operating  system.
+Such  
+operating  systems  allow  more  than one process  to be loaded  into the executable  memory  at a 
+time and the loaded  process  shares  the CPU  using  time multiplexing .
+Process scheduler  
+Categories  of Scheduling  
+Scheduling  falls into one of two categories:  
+
+  Prepared by J.BENITA,AP/CSE,KARE  
+ 
+ Non-Preemptive:  In this case,  a process’s  resource  cannot  be taken  before  the process  has 
+finished  running.
+When  a running  process  finishes  and transitions  to a waiting  state,  
+resources  are switched.
+ Preemptive:  In this case,  the OS assigns  resources  to a process  for a predetermined  period.
+The process  switches  from  running  state to ready  state  or from  waiting  state to ready  state  
+during  resource  allocation.
+This switching  happens  because  the CPU  may give other  
+processes  priority  and substitute  the currently  active  process  for the higher  priority  process.
+Types  of Process  Schedulers  
+There  are three  types  of process  schedulers:  
+1.
+Long Term or Job Scheduler  
+It brings  the new process  to the ‘Ready  State’.
+It controls  the Degree  of Multi -programming , 
+i.e., the number  of processes  present  in a ready  state at any point  in time.
+It is important  that 
+the long-term  scheduler  make  a careful  selection  of both I/O and CPU -bound  processes.
+I/O-
+bound  tasks  are which  use much  of their  time in input and output  operations  while  CPU -bound  
+processes  are which  spend  their time on the CPU.
+The job scheduler  increases  efficiency  by 
+maintaining  a balance  between  the two.
+They  operate  at a high level  and are typically  used in 
+batch -processing  systems.
+2.
+Short -Term or CPU Scheduler  
+It is responsible  for selecting  one process  from  the ready  state for scheduling  it on the running  
+state.
+Note:  Short -term scheduler  only selects  the process  to schedule  it doesn’t  load the 
+process  on running.
+Here  is when  all the scheduling  algorithms  are used.
+The CPU  scheduler  
+is responsible  for ensuring  no starvation  due to high burst  time processes.
+Short Term Scheduler  
+
+  Prepared by J.BENITA,AP/CSE,KARE  
+ 
+The dispatcher  is responsible  for loading  the process  selected  by the Short -term scheduler  on 
+the CPU  (Ready  to Running  State)  Context  switching  is done  by the dispatcher  only.
+A 
+dispatcher  does the following:   
+ Switching  context.
+ Switching  to user mode.
+ Jumping  to the proper  location  in the newly  loaded  program.
+3.
+Medium -Term Scheduler  
+It is responsible  for suspending  and resuming  the process.
+It mainly  does swapping  (moving  
+processes  from  main  memory  to disk and vice versa).
+Swapping  may be necessary  to improve  
+the process  mix or because  a change  in memory  requirements  has overcommitted  available  
+memory,  requiring  memory  to be freed  up.
+It is helpful  in maintaining  a perfect  balance  
+between  the I/O bound  and the CPU  bound.
+It reduces  the degree  of multiprogramming.
+Medium Term Scheduler  
+Some Other Schedulers  
+ I/O Schedulers:  I/O schedulers  are in charge  of managing  the execution  of I/O operations  
+such as reading  and writing  to discs  or networks.
+They  can use various  algorithms  to 
+determine  the order  in which  I/O operations  are executed,  such as FCFS  (First -Come,  First-
+Served)  or RR (Round  Robin).
+ Real -Time Schedulers:  In real-time systems,  real-time schedulers  ensure  that critical  tasks  
+are completed  within  a specified  time frame.
+They  can prioritize  and schedule  tasks  using  
+various  algorithms  such as EDF  (Earliest  Deadline  First)  or RM (Rate  Monot onic).
+Comparison  Among  Scheduler  
+
+  Prepared by J.BENITA,AP/CSE,KARE  
+ 
+Long  Term  Scheduler  Short  Term  Schedular  Medium  Term  Scheduler  
+It is a job scheduler  It is a CPU  scheduler  It is a process -swapping  
+scheduler.
+Generally,  Speed  is 
+lesser  than short  term  
+scheduler  Speed  is the fastest  among  all of 
+them. Speed  lies in between  both short  
+and long-term schedulers.
+It controls  the degree  
+of multiprogramming  It gives  less control  over how 
+much  multiprogramming  is 
+done. It reduces  the degree  of 
+multiprogramming.
+It is barely  present  or 
+none xistent  in the 
+time-sharing  system.
+It is a minimal  time-sharing  
+system. It is a component  of systems  for 
+time sharing.
+It can re-enter  the 
+process  into memory,  
+allowing  for the 
+continuation  of 
+execution. It selects  those  processes  which  
+are ready  to execute It can re-introduce  the process  
+into memory  and execution  can 
+be continued.
+Two -State  Process  Model  Short -Term  
+The terms  “running”  and “non -running”  states  are used to describe  the two-state process  
+model.
+ Running:  A newly  created  process  joins  the system  in a running  state when  it is created.
+ Not Running:  Processes  that are not currently  running  are kept in a queue  and await  
+execution.
+A pointer  to a specific  process  is contained  in each entry  in the queue.
+Linked 
+lists are used to implement  the queue  system.
+This is how the dispatcher  is used.
+When  a 
+process  is stopped,  it is moved  to the back  of the waiting  queue.
+The process  is discarded  
+depending  on whether  it succeeded  or failed.
+The dispatcher  then chooses  a process  to run 
+from  the queue  in either  scenario.
+Context  Switching  
+  Prepared by J.BENITA,AP/CSE,KARE  
+ 
+In order  for a process  execution  to be continued  from  the same  point  at a later time,  context  
+switching  is a mechanism  to store  and restore  the state or context  of a CPU  in the Process  
+Control  block.
+A context  switcher  makes it possible  for multiple  processes  to share  a single  
+CPU  using  this method.
+A multitasking operating system  must  include  context  switching  
+among  its features.
+The state of the currently  running  process  is saved  into the process  control  block  when  the 
+scheduler  switches  the CPU  from  executing  one process  to another.
+The state used to set the 
+computer,  registers,  etc.
+for the process  that will run next is then loaded  from  its own PCB.
+After  that, the second  can start processing.
+Context Switching  
+In order  for a process  execution  to be continued  from  the same  point  at a later time,  context  
+switching  is a mechanism  to store  and restore  the state or context  of a CPU  in the Process 
+Control block .
+A context  switcher  makes  it possible  for multiple  processes  to share  a single  
+CPU  using  this method.
+A multitasking  operating  system  must  include  context  switching  
+among  its features.
+ Program  Counter  
+ Scheduling  information  
+ The base and limit  register  value  
+ Currently  used register  
+ Changed  State  
+ I/O State  information  
+ Accounting  information  
+States of a Process in Operating Systems  
+In an operating  system,  a process  is a program  that is being  executed.
+During  its execution,  a 
+process  goes through  different  states.
+Understanding  these  states  helps  us see how the operating  
+system  manages  processes,  ensuring  that the computer  runs efficiently.
+Prepared by J.BENITA,AP/CSE,KARE  
+ 
+There  must  be a minimum  of five states.
+Even  though  the process  could  be in one of these  states  
+during  execution,  the names  of the states  are not standardized.
+Each  proces s goes through  several  
+stages  throughout  its life cycle.
+In this article,  We discuss  different  states  in detail.
+Process  States  in Operating  System  
+The states  of a process  are as follows:   
+ New  State:  In this step,  the process  is about  to be created  but not yet created.
+It is the program  
+that is present  in secondary  memory  that will be picked  up by the OS to create  the process.
+ Ready  State:  New  -> Ready  to run.
+After  the creation  of a process,  the process  enters  the 
+ready  state i.e.
+the process  is loaded  into the main  memory.
+The process  here is ready  to run 
+and is waiting  to get the CPU  time for its execution.
+Processes  that are ready  for execution  by 
+the CPU  are maintained  in a queue  called  a ready  queue  for ready  processes.
+ Run State:  The process  is chosen  from  the ready  queue  by the OS for execution  and the 
+instructions  within  the process  are executed  by any one of the available  CPU  cores.
+ Blocked  or Wait  State:  Whenever  the process  requests  access  to I/O or needs  input  from  the 
+user or needs  access  to a critical  region(the  lock for which  is already  acquired)  it enters  the 
+blocked  or waits  state.
+The process  continues  to wait in the main  memory  and does not require  
+CPU.
+Once  the I/O operation  is completed  the process  goes to the ready  state.
+ Terminated  or Completed  State:  Process  is killed  as well as PCB  is deleted.
+The resources  
+allocated  to the process  will be released  or deallocated.
+ Suspend  Ready:  Process  that was initially  in the ready  state but was swapped  out of main  
+memory(refer  to Virtual  Memory  topic) and placed  onto external  storage  by the scheduler  is 
+said to be in suspend  ready  state.
+The process  will transition  back  to a ready  state whenever  
+the process  is again  brought  onto the main  memory.
+ Suspend  Wait  or Suspend  Blocked:  Similar  to suspend  ready  but uses the process  which  was 
+performing  I/O operation  and lack of main  memory  caused  them  to move  to secondary  
+memory.
+When  work  is finished  it may go to suspend  ready.
+Prepared by J.BENITA,AP/CSE,KARE  
+ 
+ 
+ CPU  and I/O Bound  Processes:  If the process  is intensive  in terms  of CPU  operations,  then 
+it is called  CPU  bound  process. Similarly,  If the process  is intensive  in terms  of I/O operations  
+then it is called  I/O bound  process.
+How  Does  a Process  Move  From  One State  to Other  State?
+A process  can move  between  different  states  in an operating  system  based  on its execution  status  
+and resource  availability.
+Here  are some  examples  of how a process  can move  between  different  
+states:  
+ New  to Ready:  When  a process  is created,  it is in a new state.
+It moves  to the ready  state 
+when  the operati ng system  has allocated  resources  to it and it is ready  to be executed.
+ Ready  to Running:  When  the CPU  becomes  available,  the operating  system  selects  a process  
+from  the ready  queue  depending  on various  scheduling  algorithms  and moves  it to the running  
+state.
+ Running  to Blocked:  When  a process  needs  to wait for an event  to occur  (I/O operation  
+or system  call), it moves  to the blocked  state. For example,  if a process  needs  to wait for user 
+input,  it moves  to the blocked  state until the user provides  the input.
+ Running  to Ready:  When  a running  process  is preempted  by the operating  system,  it moves  
+to the ready  state. For example,  if a higher -priority  process  becomes  ready,  the operating  
+system  may preempt  the running  process  and move  it to the ready  state.
+Prepared by J.BENITA,AP/CSE,KARE  
+ 
+ Blocked  to Ready:  When  the event  a blocked  process  was waiting  for occurs,  the process  
+moves  to the ready  state.
+For example,  if a process  was waiting  for user input  and the input  is 
+provided,  it moves  to the ready  state.
+ Running  to Terminated:  When  a process  completes  its execution  or is terminated  by the 
+operating  system,  it moves  to the terminated  state.
+Types  of Schedulers  
+ Long -Term  Scheduler:   Decides  how many  process es should  be made  to stay in the ready  
+state.
+This decides  the degree  of multiprogramming .
+Once  a decision  is taken  it lasts for a long 
+time which  also indicate s that it runs infrequently.
+Hence  it is called  a long-term scheduler.
+ Short -Term  Scheduler:  Short -term scheduler  will decide  which  process  is to be executed  
+next and then it will call the dispatcher .
+A dispatcher  is a software  that moves  the process  from  
+ready  to run and vice versa.
+In other  words,  it is context  switching.
+It runs frequently.
+Short -
+term scheduler  is also called  CPU  scheduler.
+ Medium  Sched uler:  Suspension  decision  is taken  by the medium -term scheduler.
+The 
+medium -term scheduler  is used for swapping  which  is moving  the process  from  main  memory  
+to secondary  and vice versa.
+The swapping  is done  to reduce  degree  of multiprogramming.
+Multiprogramming   
+We have many  processes  ready  to run.
+There  are two types  of multiprogramming:  
+ Preemption  – Process  is forcefully  removed  from  CPU.
+Pre-emption  is also called  time 
+sharing  or multitasking.
+ Non-Preemption  – Processes  are not removed  until they complete  the execution.
+Once  
+control  is given  to the CPU  for a process  execution,  till the CPU  releases  the control  by itself,  
+control  cannot  be taken  back  forcibly  from  the CPU.
+Degree  of Multiprogramming   
+The number  of processes  that can reside  in the ready  state at maximum  decides  the degree  of 
+multiprogramming,  e.g., if the degree  of programming  = 100, this means  100 processes  can 
+reside  in the ready  state at maximum.
+Operation  on The Process  
+ Creation:  The process  will be ready  once  it has been created,  enter  the ready  queue  (main  
+memory ), and be prepared  for execution.
+ Planning:  The operating  system  picks  one process  to begin  executing  from  among  the 
+numerous  processes  that are current ly in the ready  queue.
+Scheduling  is the process  of 
+choosing  the next process  to run.
+Prepared by J.BENITA,AP/CSE,KARE  
+ 
+ Application:  The processor  begins  running  the process  as soon  as it is scheduled  to run.
+During  execution,  a process  may become  blocked  or wait,  at which  point  the processor  
+switches  to executing  the other  processes.
+ Killing  or Deletion:  The OS will terminate  the process  once  its purpose  has been fulfilled.
+The process’s  context  will be over there.
+ Blocking:  When  a process  is waiting  for an event  or resource,  it is blocked.
+The operating  
+system  will place  it in a blocked  state,  and it will not be able to execute  until the event  or 
+resource  becomes  available.
+ Resumption:  When  the event  or resource  that caused  a process  to block  becomes  available,  
+the process  is removed  from  the blocked  state and added  back to the ready  queue.
+ Context  Switching:  When  the operating  system  switches  from  executing  one process  to 
+another,  it must  save the current  process’s  context  and load the context  of the next process  to 
+execute.
+This is known  as context  switching.
+ Inter -Process  Communication:  Processes  may need  to communicate  with each other  to share  
+data or coordinate  actions.
+The operating  system  provides  mechanisms  for inter-process  
+communication,  such as shared  memory,  message  passing , and synchronization  primitives.
+ Process  Synchronization:  Multiple  processes  may need  to access  a shared  resource  or critical  
+section  of code  simultaneously. The operating  system  provides  synchronization  mechanisms  
+to ensure  that only one process  can access  the resource  or critical  section  at a time.
+ Process  States:  Processes  may be in one of several  states,  including  ready,  running,  waiting,  
+and terminated.
+The operating  system  manages  the process  states  and transitions  between  
+them.
+Features  of The Process  State  
+ A process  can move  from  the running  state to the waiting  state if it needs  to wait for a resource  
+to become  available.  A process  can move  from  the waiting  state to the ready  state when  the resource  it was waiting  
+for becomes  available.
+ A proce ss can move  from  the ready  state to the running  state when  it is selected  by the 
+operating  system  for execution.
+ The scheduling  algorithm  used by the operating  system  determines  which  process  is selected  
+to execute  from  the ready  state.
+ The operating  system  may also move  a process  from  the running  state to the ready  state to 
+allow  other  processes  to execute.
+Prepared by J.BENITA,AP/CSE,KARE  
+ 
+ A process  can move  from  the running  state to the terminated  state when  it completes  its 
+execution.
+ A process  can move  from  the waiting  state direc tly to the terminated  state if it is aborted  or 
+killed  by the operating  system  or another  process.
+ A process  can go through  ready,  running  and waiting  state any number  of times  in its lifecycle  
+but new and terminated  happens  only once.
+ The process  state includes  information  about  the program  counter,  CPU  registers , memory  
+allocation,  and other  resources  used by the process.
+ The operating  system  maintains  a process  control  block  (PCB ) for each process,  which  
+contains  information  about  the process  state,  priority,  scheduling  information,  and other  
+process -related  data.
+ The process  state diagram  is used to represent  the transitions  between  different  states  of a 
+process  and is an essential  concept  in process  management  in operating  systems .
+Process Table and Process Control Block (PCB)  
+While  creating  a process,  the operating  system  performs  several  operations.
+To identify  the 
+processes,  it assigns  a process  identification  number  (PID)  to each process.
+As the operating  
+system  supports  multi -programming,  it needs  to keep track  of all the processes.
+For this task,  the 
+process  control  block  (PCB)  is used to track  the process’s  execution  status.
+Each  block  of 
+memory  contains  information  about  the process  state,  program  counter,  stack  pointer,  status  of 
+opened  files, scheduling  algorithms,  etc.
+All this information  is required  and must  be saved  when  the process  is switched  from  one state to 
+another.
+When  the process  makes  a transition  from  one state to another,  the operating  system  
+must  update  information  in the process’s  PCB.
+A process  control  block  (PCB)  contains  
+information  about  the process,  i.e.
+registers,  quantum,  priority,  etc.
+The process  table  is an array  
+of PCBs,  which  logically  contains  a PCB  for all of the current  processes  in the system.
+Structure  of the Process  Control  Block  
+A Process  Control  Block  (PCB)  is a data structure  used by the operating  system  to manage  
+information  about  a process.
+The process  control  keeps  track  of many  important  pieces  of 
+information  needed  to manage  processes  efficiently.
+The diagram  helps  explain  some  of these  
+key data items.
+Prepared by J.BENITA,AP/CSE,KARE  
+ 
+ 
+Process Control Block  
+ Pointer:  It is a stack  pointer  that is required  to be saved  when  the process  is switched  from  
+one state to another  to retain  the current  position  of the process.
+ Process  state:  It stores  the respective  state of the process.
+ Process  number:  Every  process  is assigned  a unique  id known  as process  ID or PID which  
+stores  the process  identifier.
+ Program  counter:  Program  Counter  stores  the counter,  which  contains  the address  of the next 
+instruction  that is to be executed  for the process.
+ Register:  Registers  in the PCB,  it is a data structure.
+When  a processes  is running  and it’s 
+time slice expires,  the current  value  of process  specific  registers  would  be stored  in the PCB  
+and the proces s would  be swapped  out.
+When  the process  is scheduled  to be run, the register  
+values  is read from  the PCB  and written  to the CPU  registers.
+This is the main  purpose  of the 
+registers  in the PCB.
+ Memory  limits:  This field contains  the information  about  memory  management  system  used 
+by the operating  system.
+This may include  page  tables,  segment  tables,  etc.
+ List of Open  files:  This information  includes  the list of files opened  for a process.
+Prepared by J.BENITA,AP/CSE,KARE  
+ 
+ 
+Additional  Points  to Consider  for Process  Control  Block  (PCB)  
+ Interrupt  Handling:  The PCB  also contains  information  about  the interrupts  that a process  
+may have generated  and how they were  handled  by the operating  system.
+ Context  Switching:  The process  of switching  from  one process  to another  is called  context  
+switching.
+The PCB  plays  a crucial  role in context  switching  by saving  the state of the current  
+process  and restoring  the state of the next process.
+ Real -Time  Systems:  Real-time operating  systems  may require  additional  information  in the 
+PCB,  such as deadl ines and priorities,  to ensure  that time-critical  processes  are executed  in a 
+timely  manner.
+ Virtual  Memory  Management:  The PCB  may contain  information  about  a process’s  virtual  
+memory  management,  such as page  tables  and page  fault handling.
+ Inter -Process  Communication:  The PCB  can be used to facilitate  inter-process  
+communication  by storing  information  about  shared  resources  and communication  channels  
+between  processes.
+ Fault  Tolerance:  Some  operating  systems  may use multiple  copies  of the PCB  to provide  
+fault tolerance  in case of hardware  failures  or software  errors.
+Location  of The Process  Control  Block  
+The Process  Control  Block  (PCB)  is stored  in a special  part of memory  that normal  users  can’t  
+access.
+This is because  it holds  important  information  about  the process.
+Some  operating  systems  
+place  the PCB  at the start of the kernel  stack  for the process,  as this is a safe and secure  spot.
+Advantages  
+
+  Prepared by J.BENITA,AP/CSE,KARE  
+ 
+ Efficient  Process  Management:  The process  table  and PCB  provide  an efficient  way to 
+manage  processes  in an operating  system.
+The process  table  contains  all the information  about  
+each process,  while  the PCB  contains  the current  state of the process,  such as the program  
+counter  and CPU  registers.
+ Resource  Management:  The process  table  and PCB  allow  the operating  system  to manage  
+system  resources,  such as memory  and CPU  time,  efficiently.
+By keeping  track  of each 
+process’s  resource  usage,  the operating  system  can ensure  that all processes  have  access  to the 
+resources  they need.
+ Process  Synchronization:  The process  table  and PCB  can be used to synchronize  processes  
+in an operating  system.
+The PCB  contains  information  about  each process’s  synchronization  
+state,  such as its waiting  status  and the resources  it is waiting  for.
+ Process  Scheduling:  The process  table  and PCB can be used to schedule  processes  for 
+execution.
+By keeping  track  of each process’s  state and resource  usage,  the operating  system  
+can determine  which  processes  should  be executed  next.
+Disadvantages  
+ Overhead:  The process  table  and PCB  can introduce  overhead and reduce  system  
+performance.
+The operating  system  must  maintain  the process  table  and PCB  for each process,  
+which  can consume  system  resources.
+ Complexity:  The process  table  and PCB  can increase  system  complexity  and make  it more  
+challenging  to deve lop and maintain  operating  systems.
+The need to manage  and synchronize  
+multiple  processes  can make  it more  difficult  to design  and implement  system  features  and 
+ensure  system  stability.
+ Scalability:  The process  table  and PCB  may not scale  well for large -scale systems  with many  
+processes. As the number  of processes  increases,  the process  table  and PCB  can become  larger  
+and more  difficult  to manage  efficiently.
+ Security:  The process  table  and PCB  can introduce  security  risks  if they are not implemented  
+correctly. Malicious  programs  can potentially  access  or modify  the process  table  and PCB  to 
+gain unauthorized  access  to system  resources  or cause  system  instability.
+ Miscellaneous  Accounting  and Status  Data  – This field includes  information  about  the 
+amoun t of CPU  used,  time constraints,  jobs or process  number,  etc.
+The process  control  block  
+stores  the register  content  also known  as execution  content  of the processor  when  it was 
+blocked  from  running.
+This execution  content  architecture  enables  the operating  system  to 
+restore  a process’s  execution  context  when  the process  returns  to the running  state.
+When  the 
+  Prepared by J.BENITA,AP/CSE,KARE  
+ 
+process  makes  a transition  from  one state to another,  the operating  system  updates  its 
+information  in the process’s  PCB.
+The operating  system  maintains  pointers  to each process’s  
+PCB  in a process  table  so that it can access  the PCB  quickly.
+What  are Threads?
+A thread  is a single  sequence  stream  within  a process.
+Threads  have  the same  properties  as the 
+process  so they are called  lightweight  processes.
+Threads  are executed  one after another,  but it 
+gives  the illusion  that they are executing  in parallel.
+Each  thread has different  states.
+In this 
+article,  we are going  to discuss  threads  in detail  along  with similarities  between  Threads  and 
+Processes,  Differences  between  Threads  and Processes.
+Threads  are small  units  of a computer  program  that can run independently.
+They  allow  a 
+program  to perform  multiple  tasks  at the same  time,  like having  different  parts  of the program  
+run simultaneously.
+This makes  programs  more  efficient  and responsive,  especially  for tasks  
+that can be divided  into smaller  parts.
+Each  thread  has: 
+ A program  counter    
+ A register  set   
+ A stack  space    
+Threads  are not independent  of each other  as they share  the code,  data,  OS resources,  etc.
+Similarity  Between  Threads  and Process    
+ Only  one thread  or process  is active  at a time in an operating  system.
+ Within  the process,  both execute  in a sequential  manner.
+ Both  can create  children.
+ Both  can be scheduled  by the operating  system:  Both  threads  and processes  can be 
+scheduled  by the operating  system  to execute  on the CPU .
+The operating  system  is 
+responsible  for assigning  CPU  time to the threads  and processes  based  on various  scheduling  
+algorithms .
+ Both  have  their  own execution  conte xt: Each  thread  and process  has its own execution  
+context,  which  includes  its own register  set, program  counter,  and stack.
+This allows  each  
+thread  or process  to execute  independently  and make  progress  without  interfering  with other  
+threads  or processes.
+ Both can communicate  with each other:  Threads  and processes  can communicate  with each  
+other  using  various  inter-process  communication  (IPC)  mechanisms  such as shared  memory,  
+  Prepared by J.BENITA,AP/CSE,KARE  
+ 
+message  queues,  and pipes.
+This allows  threads  and processes  to share  data and coordinate  
+their activities.
+ Both  can be preempted:  Threads  and processes  can be preempted  by the operating  system,  
+which  means  that their execution  can be interrupted  at any time.
+This allows  the operating  
+system  to switch  to another  thread  or process  that needs to execute.
+ Both  can be terminated:  Threads  and processes  can be terminated  by the operating  system  or 
+by other  threads  or processes. When  a thread  or process  is terminated,  all of its resources,  
+including  its execution  context,  are freed  up and made  available  to other  threads  or 
+processes.
+Differences  between  Threads  and Process  
+ Resources:  Processes  have  their own address  space  and resources,  such as memory  and file 
+handles,  whereas  threads  share  memory  and resources  with the program  that created  them.
+ Scheduling:  Processes  are scheduled  to use the processor  by the operating  system,  whereas  
+threads  are scheduled  to use the processor  by the operating  system  or the program  itself.
+ Creation:  The operating  system  creates  and manages  processes,  whereas  the program  or the 
+operating  system  creates  and manages  threads.
+ Communication:  Because  processes  are isolated  from  one another  and must  rely on inter-
+process  communication  mechanisms,  they generally  have  more  difficulty  communicating  
+with one another  than threads do.
+Threads,  on the other  hand,  can interact  with other  threads  
+within  the same  program  directly.
+Threads,  in general,  are lighter  than processes  and are better  suited  for concurrent  execution  
+within  a single  program.
+Processes  are commonly  used to run separate  programs  or to isolate  
+resources  between  programs.
+Types  of Threads  
+There  are two main  types  of threads User  Level  Thread  and Kerne l Level  Thread  let’s discuss  
+each one by one in detail:  
+User  Level  Thread  (ULT)  
+User  Level  Thread  is implemented  in the user level  library;  they are not created  using  the 
+system  calls.
+Thread  switching  does not need  to call OS and to cause  interrupt  to Kernel.
+Kernel  doesn’t  know  about  the user level  thread  and manages  them  as if they were  single -
+threaded  processes.
+Advantages  of ULT  
+ Can be implemented  on an OS that doesn’t  support  multithreading .
+Prepared by J.BENITA,AP/CSE,KARE  
+ 
+ Simple  representation  since  thread  has only program  counter , register  set, stack  space.
+ Simple  to create  since  no intervention  of kernel.
+ Thread  switching  is fast since  no OS calls need  to be made.
+Disadvantages  of ULT  
+ No or less co-ordination  among  the threads  and Kernel.
+ If one thread  causes  a page  fault,  the entire  process  blocks.
+Kernel  Level  Thread  (KLT)  
+Kernel  knows  and manages  the threads.
+Instead  of thread  table  in each process,  the kernel  itself  
+has thread  table  (a master  one) that keeps  track  of all the threads  in the system.
+In addition  
+kernel  also maintains  the traditional  process  table  to keep  track  of the processes.
+OS kernel  
+provides  system  call to create  and manage  threads.
+Advantages  of KLT  
+ Since  kernel  has full knowledge  about  the threads  in the system,  scheduler  may decide  to 
+give more  time to processes  having  large  number  of threads.
+ Good  for applications  that frequently  block.
+Disadvantages  of KLT  
+ Slow  and inefficient.
+ It requires  thread  control  block  so it is an overhead.
+Threading  Issues  
+ The fork()  and exec()  System  Calls : The semantics  of the fork()  and exec()  system  calls  
+change  in a multithreaded  program.
+If one thread  in a program  calls fork(),  does the new 
+process  duplicate  all threads,  or is the new process  single -threaded? Some  UNIX  systems  
+have  chosen  to have  two versions  of fork(),  one that duplicates  all threads  and another  that 
+duplicates  only the thread  that invoked  the fork()  system  call.
+The exec()  system  , That  is, if 
+a thread  invokes  the exec()  system  call, the program  specified  in the parameter  to exec()  will 
+replace  the entire  process —including  all threads.
+ Signal  Handling : A signal  is used in UNIX  systems  to notify  a process  that a particular  
+event  has occurred.
+A signal  may be received  either  synchronously  or asynchronously  
+depending  on the source  of and the reason  for the event  being  signaled.
+All signals,  whether  
+synchronous  or asynchronous,  follow  the same  pattern:1.
+A signal  is generated  by the 
+occurrence  of a particular  event.2.
+The signal  is delivered  to a process.3.
+Once  delivered,  the 
+signal  must  be handled.
+A signal  may be handled  by one of two possible  handlers:  1. A 
+default  signal  handler  .2. A user-defined  signal  handler.
+Every  signal  has a default  signal  
+  Prepared by J.BENITA,AP/CSE,KARE  
+ 
+handler  that the kernel  runs when  handling  that signal.
+This default  action  can be overridden  
+by a user-defined  signal  handler  that is called  to handle  the signal.
+ Thread  Cancellation : Thread  cancellation  involves  terminating  a thread  before it has 
+completed.
+For example,  if multiple  threads  are concurrently  searching  through  a database  
+and one thread  returns  the result,  the remaining  threads  might  be canceled.
+Another  situation  
+might  occur  when  a user presses  a button  on a web browser  that stops  a web page  from  
+loading  any further.
+Often,  a web page  loads  using  several  threads —each image  is loaded  in 
+a separate  thread.
+When  a user presses  the stop button  on the browser,  all threads  loading  the 
+page  are canceled.
+A thread  that is to be canceled is often  referred  to as the target  thread. Cancellation  of a target  thread  may occur  in two different  scenarios:1.
+Asynchronous  
+cancellation.
+One thread  immediately  terminates  the target  thread.2.
+Deferred  cancellation.
+The target  thread  periodically  checks  whether  it should  terminate,  allowing  it an opportunity  
+to terminate  itself  in an orderly  fashion.
+ Thread -Local  Storage : Threads  belonging  to a process  share  the data of the process.
+Indeed,  this data sharing  provides  one of the benefits  of multithr eaded  programming.
+However,  in some  circumstances,  each thread  might  need  its own copy  of certain  data.
+We 
+will call such data thread -local  storage  (or TLS.)
+For example,  in a transaction -processing  
+system,  we might  service  each transaction  in a separate  thread.
+Furthermore,  each  
+transaction  might  be assigned  a unique  identifier.
+To associate  each thread  with its unique  
+identifier,  we could  use thread -local  storage.
+ Scheduler  Activations : One scheme  for communication  between  the user-thread  library  and 
+the kernel  is known  as scheduler  activation.
+It works  as follows:  The kernel  provides  an 
+application  with a set of virtual  processors  (LWPs),  and the application  can schedule  user 
+threads  onto an available  virtual  processor.
+Advantages  of Threading  
+ Responsiveness:  A multithreaded  application  increases  responsiveness  to the user.
+ Resource  Sharing:  Resources  like code  and data are shared  between  threads,  thus allowing  
+a multithreaded  application  to have  several  threads  of activity  within  the same  address  
+space.
+ Increased  Concurrency:  Threads  may be running  parallelly  on different  processors,  
+increasing  concurrency  in a multiprocessor  machine.
+ Lesser  Cost:  It costs  less to create  and context -switch  threads  than processes.  Lesser  Context -Switch  Time:  Threads  take lesser  context -switch  time than processes.
+Prepared by J.BENITA,AP/CSE,KARE  
+ 
+Disadvantages  of Threading  
+ Complexity:  Threading  can make  programs  more  complicated  to write  and debug  because  
+threads  need  to synchronize  their actions  to avoid  conflicts.
+ Resource  Overhead:  Each  thread  consumes  memory  and processing  power,  so having  too 
+many  threads  can slow  down  a program  and use up system  resources.
+ Difficulty  in Optimization:  It can be challenging  to optimize  threaded  programs  for 
+different  hardware  configurations,  as thread  performance  can vary based  on the number  of 
+cores  and other  factors.
+ Debugging  Challenges:  Identifying  and fixing  issues  in threaded  programs  can be more  
+difficult  compared  to single-threaded  programs,  making  troubleshooting  complex.
+What  is CPU  scheduling?  CPU  scheduling  is essential  for the system’s  performance  and ensures  that processes  
+are executed  correctly  and on time.
+Different  CPU  scheduling  algorithms  have  other  
+properties  and the choice  of a particular  algorithm  depends  on various  factors. Many  
+criteria  have  been  suggested  for comparing  CPU  scheduling  algorithms.
+ CPU  Scheduling  is a process  that allows  one process  to use the CPU  while  another  
+process  is delayed  due to unavailability  of any resources  such as I / O etc, thus making  
+full use of the CPU. In short,  CPU  scheduling  decides  the order  and priority  of the 
+processes  to run and allocates  the CPU  time based  on various  parameters  such as CPU  
+usage,  throughput,  turnar ound,  waiting  time,  and response  time. The purpose  of CPU  
+Scheduling  is to make  the system  more  efficient,  faster,  and fairer.
+ Criteria  of CPU  Scheduling  
+ CPU  Scheduling  has several  criteria.
+Some  of them  are mentioned  below.
+ 1.
+CPU  utilization  
+ The main  objective  of any CPU  scheduling  algorithm  is to keep  the CPU  as busy  as 
+possible.
+Theoretically,  CPU  utilization  can range  from  0 to 100 but in a real-time 
+system , it varies  from  40 to 90 percent  depending  on the load upon  the system.
+ 2.
+Throughput  
+ A meas ure of the work  done  by the CPU  is the number  of processes  being  executed  and 
+completed  per unit of time.
+This is called  throughput.
+The throughput  may vary 
+depending  on the length  or duration  of the processes.
+Prepared by J.BENITA,AP/CSE,KARE  
+ 
+ 
+CPU Scheduling Criteria  
+ 3.
+Turnaround  Time  
+ For a particular  process,  an important  criterion  is how long it takes  to execute  that 
+process.
+The time elapsed  from  the time of submission  of a process  to the time of 
+completion  is known  as the turnaround  time.
+Turn -around  time is the sum of times  
+spent waiting  to get into memory,  waiting  in the ready  queue,  executing  in CPU,  and 
+waiting  for I/O.
+ Turn  Around  Time  = Completion  Time  – Arrival  Time.
+4.
+Waiting  Time  
+A scheduling  algorithm  does not affect  the time required  to complete  the process  once  it starts  
+execution.
+It only affects  the waiting  time of a process  i.e.
+time spent  by a process  waiting  in 
+the ready  queue.
+Waiting  Time  = Turnaround  Time  – Burst  Time.
+5.
+Response  Time  
+In an interactive  system,  turn-around  time is not the best criterion.
+A process  may produce  
+some  output  fairly  early  and continue  computing  new results  while  previous  results  are being  
+output  to the user.
+Thus  another  criterion  is the time taken  from  submission  of the process  of 
+the request  until the first response  is produced .
+This measure  is called  response  time.
+Response  Time  = CPU  Allocation  Time(when  the CPU  was allocated  for the first)  – Arrival  
+Time  
+ 
+6.
+Completion  Time  
+The completion  time is the time when  the process  stops  executing,   which  means  that the 
+process  has completed  its burst  time and is completely  executed.
+7.
+Priority  
+
+  Prepared by J.BENITA,AP/CSE,KARE  
+ 
+If the operating  system  assigns  priorities  to processes,  the scheduling  mechanism  should  favor  
+the higher -priority  processes.
+8.
+Predictability  
+A given  process  always  should  run in about  the same  amount  of time under  a similar  system  
+load.
+Importance  of Selecting  the Right  CPU  Scheduling  Algorithm  for Specific  Situations  
+It is important  to choose  the correct  CPU  scheduling  algorithm  because  different  algorithms  
+have  different  priorities  for different  CPU  scheduling  criteria.Different  algorithms  have  
+different  strengths  and weaknesses. Choosing  the wrong  CPU  scheduling  algorithm  in a given  
+situation  can result  in suboptimal  performance  of the system.
+Example:  Here  are some  examples  of CPU  scheduling  algorithms  that work  well in different  
+situations.
+Round  Robin  scheduling  algorithm  works  well in a time-sharing  system  where  tasks  have  to be 
+completed  in a short  period  of time.
+SJF scheduling  algorithm  works  best in a batch  processing  
+system  wher e shorter  jobs have  to be completed  first in order  to increase  throughput.Priority  
+scheduling  algorithm  works  better  in a real-time system  where  certain  tasks  have  to be 
+prioritized  so that they can be completed  in a timely  manner.
+Factors  Influencing  CPU  Scheduling  Algorithms  
+There  are many  factors  that influence  the choice  of CPU  scheduling  algorithm.
+Some  of them  
+are listed  below.
+ The number  of processes.
+ The processing  time required.
+ The urgency  of tasks.
+ The system  requirements.
+Selecting  the correct  algorithm  will ensure  that the system  will use system  resources  
+efficiently,  increase  productivity,  and improve  user satisfaction.
+CPU  Scheduling  Algorithms  
+There  are several CPU  Scheduling  Algorithms,  that are listed  below.
+ First Come  First Served  (FCFS)  
+ Shortest  Job First (SJF)  
+ Priority  Scheduling  
+ Round  Robin  (RR)  
+ Shortest  Remaining  Time  First  (SRTF)  
+  Prepared by J.BENITA,AP/CSE,KARE  
+ 
+ 
+ 
+First come – First served (FCFS):  
+irst come  – First served  (FCFS),  is the simplest  scheduling  algorithm.
+FIFO  simply  queues  
+processes  according  to the order  they arrive  in the ready  queue.
+In this algorithm,  the process  
+that comes  first will be executed  first and next process  starts  only after the previous  gets fully  
+executed.
+Terminologies  Used  in CPU  Scheduling   
+ Arrival Time:  The time at which  the process  arrives  in the ready  queue.
+ Completion Time:  The time at which  the process  completes  its execution.
+ Turn Around Time:  Time  Difference  between  completion  time and arrival  time. Turn  
+Around  Time  = (Completion  Time  – Arrival  Time)  
+ Waiting Time (W. T):  Time  Difference  between  turnaround  time and burst  time Ie.  Waiting  Time  = (Turn  Around  Time  – Burst  Time).
+In this example, we have assumed the arrival time of all processes is 0, so turnaround and 
+completion times are the same.
+ Arrival time (AT)  − Arrival time is the time at which the process arrives in ready queue.
+ Burst time (BT) or CPU time of the process  − Burst time is the unit of time in which a 
+particular process completes its execution.
+Prepared by J.BENITA,AP/CSE,KARE  
+ 
+ Completion time (CT)  − Completion time is the time at w hich the process has been 
+terminated.
+ Turn -around time (TAT)  − The total time from arrival time to completion time is 
+known as turn -around time. TAT can be written as,  
+Turn -around time (TAT) = Completion time (CT) – Arrival time (AT)  or, TAT = Burst 
+time ( BT) + Waiting time (WT)  
+ Waiting time (WT)  − Waiting time is the time at which the process waits for its 
+allocation while the previous process is in the CPU for execution. WT is written as,  
+Waiting time (WT) = Turn -around time (TAT) – Burst time (BT)  
+ Respon se time (RT)  − Response time is the time at which CPU has been allocated to a 
+particular process first time.
+In case of non -preemptive scheduling, generally Waiting time and Response time is 
+same.
+ Gantt chart  − Gantt chart is a visualization which helps to  scheduling and managing 
+particular tasks in a project.
+It is used while solving scheduling problems, for a concept of 
+how the processes are being allocated in different algorithms.
+Problem 1  
+Consider the given table below and find Completion time (CT), Turn -around time (TAT), 
+Waiting time (WT), Response time (RT), Average Turn -around time and Average Waiting time.
+Process ID  Arrival time  Burst time  
+P1 2 2 
+P2 5 6 
+P3 0 4 
+P4 0 7 
+P5 7 4 
+  Prepared by J.BENITA,AP/CSE,KARE  
+ 
+ 
+ 
+ 
+ 
+Solution  
+Gantt chart  
+ 
+For this problem CT, TAT, WT, RT is shown in the given table −  
+Process 
+ID Arrival 
+time  Burst 
+time  CT TAT=CT -
+AT WT=TAT -
+BT RT 
+P1 2 2 13 13-2= 11  11-2= 9 9 
+P2 5 6 19 19-5= 14  14-6= 8 8 
+P3 0 4 4 4-0= 4 4-4= 0 0 
+P4 0 7 11 11-0= 11  11-7= 4 4 
+P5 7 4 23 23-7= 16  16-4= 12  12 
+Average Waiting time = (9+8+0+4+12)/5 = 33/5 = 6.6 time unit (time unit can be considered as 
+milliseconds)  
+Average Turn -around time = (11+14+4+11+16)/5 = 56/5 = 11.2 time unit (time unit can be 
+considered as milliseconds)  
+Problem 2  
+
+  Prepared by J.BENITA,AP/CSE,KARE  
+ 
+Consider the given table below and find Completion time (CT), Turn -around time (TAT), 
+Waiting time (WT), Response time (RT), Average Turn -around time and Average Waiting time. Process ID  Arrival time  Burst time  
+P1 2 2 
+P2 0 1 
+P3 2 3 
+P4 3 5 
+P5 4 5 
+Solution  
+Gantt chart −  
+ 
+For this problem  CT, TAT, WT, RT is shown in the given table −  
+Process 
+ID Arrival 
+time  Burst 
+time  CT TAT=CT -
+AT WT=TAT -
+BT RT 
+P1 2 2 4 4-2= 2 2-2= 0 0 
+
+  Prepared by J.BENITA,AP/CSE,KARE  
+ 
+P2 0 1 1 1-0= 1 1-1= 0 0 
+P3 2 3 7 7-2= 5 5-3= 2 2 
+P4 3 5 12 12-3= 9 9-5= 4 4 
+P5 4 5 17 17-4= 13  13-5= 8 8 
+Average Waiting time = (0+0+2+4+8)/5 = 14/5 = 2.8 time unit (time unit can be considered as 
+milliseconds)  
+Average Turn -around time = (2+1+5+9+13)/5 = 30/5 = 6 time unit (time unit can be considered 
+as milliseconds)  
+*In idle (not -active) CPU period, no process is s cheduled to be terminated so in this time it 
+remains void for a little time.
+Advantages Of FCFS Scheduling  
+ It is an easy algorithm to implement since it does not include any complex way.
+ Every task should be executed simultaneously as it follows FIFO queue.
+ FCFS does not give priority to any random important tasks first so it’s a fair scheduling.
+Disadvantages Of FCFS Scheduling  
+ FCFS results in convoy effect which means if a process with higher burst time comes 
+first in the ready queue then the process es with lower burst time may get blocked and that 
+processes with lower burst time may not be able to get the CPU if the higher burst time 
+task takes time forever.
+ If a process with long burst time comes in the line first then the other short burst time 
+process have to wait for a long time, so it is not much good as time -sharing systems.
+ Since it is non -preemptive, it does not release the CPU before it completes its task 
+execution completely.
+Shortest Job First (or SJF) CPU Scheduling (Non - preemptive)  
+The s hortest job first (SJF) or shortest job next, is a scheduling policy that selects the waiting 
+process with the smallest execution time to execute next.
+SJN, also known as Shortest Job Next 
+(SJN), can be  preemptive  or non-preemptive.
+Prepared by J.BENITA,AP/CSE,KARE  
+ 
+Characteristics  of SJF Scheduling:  
+ Shortest Job first has the advantage of having a minimum average waiting time among 
+all scheduling  algorithms.
+ It is a Greedy Algorithm.
+ It may cause starvation if shorter processes keep coming.
+This problem can be solved using 
+the concept of  ageing.
+ It is practically infeasible as Operating System may not know burst times and therefore may 
+not sort them.
+While it is not possible to predict execution time, several methods can be used 
+to estimate the execution time for a job, such as a weighted  average of previous execution 
+times.
+ SJF can be used in specialized environments where accurate estimates of running time are 
+available.
+Algorithm:   
+ Sort all the processes according to the arrival time.
+ Then select that process that has minimum arrival time and minimum Burst time.  After completion of the process make a pool of processes that arrives afterward till the 
+completion of the previous process and select that process among the pool which is having 
+minimum Burst time.
+Shortest Job First Scheduling Algorithm  
+How  to compute  below  times  in SJF using  a program?
+Prepared by J.BENITA,AP/CSE,KARE  
+ 
+ Completion Time: Time at which process completes its execution.
+ Turn Around Time: Time Difference between completion time and arrival time. Turn  Around  Time  = Completion  Time  – Arrival  Time  
+ Waiting Time(W.T): Time Difference between turn around time and burst time.
+Waiting  Time  = Turn  Around  Time  – Burst  Time  
+ Non-Preemptive  Shortest  Job First   CPU  Scheduling  
+Non-Preemptive Shortest Job First algorithm can be implemented using  Segment  Trees  data 
+structure. For detailed implementation of Non -Preemptive  Shortest  Job First  scheduling 
+algorithm, please r efer: Program for Non -Preemptive Shortest Job First CPU Scheduling.
+we have  assumed  arrival  times  as 0, so turn around  and completion  times  are same.
+Examples  to show  working  of Non-Preemptive  Shortest  Job First  CPU  Scheduling  
+Algorithm:  
+Example -1: Consider the following table of arrival time and burst time for five processes  P1, 
+P2, P3, P4 and P5.
+Process  Burst  Time  Arrival  Time  
+P1 6 ms  2 ms  
+P2 2 ms  5 ms  
+P3 8 ms  1 ms  
+P4 3 ms  0 ms  
+P5 4 ms  4 ms  
+The Shortest Job First CPU Scheduling Algorithm will work on the basis of steps as mentioned 
+below:  
+At time  = 0, 
+ Process P4 arrives and starts executing  
+  Prepared by J.BENITA,AP/CSE,KARE  
+ 
+Time 
+Instance  Process  Arrival 
+Time  Waiting 
+Table  Execution 
+Time  Initial Burst 
+Time  Remaining 
+Burst   
+Time  
+0-1ms P4 0ms 
+ 1ms 3ms 2ms 
+At time=  1,  
+ Process P3 arrives.
+ But, as P4 still needs 2 execution units to complete.
+ Thus, P3 will wait till P4 gets executed.
+Time 
+Instance  Process  Arrival 
+Time  Waiting 
+Table  Execution 
+Time  Initial Burst 
+Time  Remaining 
+Burst   
+Time  
+1-2ms P4 0ms 
+ 1ms 2ms 1ms 
+P3 1ms P3 0ms 8ms 8ms 
+At time  =2,  
+ Process P1 arrives and is added to the waiting table   
+ P4 will continue its execution. Time 
+Instance  Process  Arrival 
+Time  Waiting 
+Table  Execution 
+Time  Initial Burst 
+Time  Remaining 
+Burst   
+Time  
+2-3ms P4 0ms 
+ 1ms 1ms 0ms 
+P3 1ms P3 0ms 8ms 8ms 
+P1 2ms P3, P1  0ms 6ms 6ms 
+At time  = 3,  
+  Prepared by J.BENITA,AP/CSE,KARE  
+ 
+ Process P4 will finish its execution.
+ Then, the burst time of P3 and P1 is compared.  Process P1 is executed because its burst time is less as compared to P3.
+Time 
+Instance  Process  Arrival 
+Time  Waiting 
+Table  Execution 
+Time  Initial Burst 
+Time  Remaining 
+Burst   
+Time  
+3-4ms P3 1ms P3 0ms 8ms 8ms 
+P1 2ms P3 1ms 6ms 5ms 
+At time  = 4,  
+ Process P5 arrives and is added to the waiting Table.
+ P1 will continue execution.
+Time 
+Instance  Process  Arrival 
+Time  Waiting 
+Table  Execution 
+Time  Initial Burst 
+Time  Remaining 
+Burst   
+Time  
+4-5ms P3 1ms P3 0ms 8ms 8ms 
+P1 2ms P3 1ms 5ms 4ms 
+P5 4ms P3, P5  0ms 4ms 4ms 
+At time  = 5,  
+ Process P2 arrives and is added to the waiting Table.
+ P1 will continue execution.
+Time 
+Instance  Process  Arrival 
+Time  Waiting 
+Table  Execution 
+Time  Initial Burst 
+Time  Remaining 
+Burst   
+Time  
+  Prepared by J.BENITA,AP/CSE,KARE  
+ 
+Time 
+Instance  Process  Arrival 
+Time  Waiting 
+Table  Execution 
+Time  Initial Burst 
+Time  Remaining 
+Burst   
+Time  
+5-6ms P3 1ms P3 0ms 8ms 8ms 
+P1 2ms P3 1ms 4ms 3ms 
+P5 4ms P3, P5  0ms 4ms 4ms 
+P2 5ms P3, P5, P2  0ms 2ms 2ms 
+At time  = 6,  
+ Process P1 will finish its execution.
+ The burst time of P3, P5, and P2 is compared.
+ Process P2 is executed because its burst time is the lowest among all.
+Time 
+Instance  Process  Arrival 
+Time  Waiting 
+Table  Execution 
+Time  Initial Burst 
+Time  Remaining 
+Burst   
+Time  
+6-9ms P3 1ms P3 0ms 8ms 8ms 
+P1 2ms P3 3ms 3ms 0ms 
+P5 4ms P3, P5  0ms 4ms 4ms 
+P2 5ms P3, P5, P2  0ms 2ms 2ms 
+At time=9,   
+ Process P2 is executing and P3 and P5 are in the waiting Table. Prepared by J.BENITA,AP/CSE,KARE  
+ 
+Time 
+Instance  Process  Arrival 
+Time  Waiting 
+Table  Execution 
+Time  Initial Burst 
+Time  Remaining 
+Burst   
+Time  
+9-11ms  P3 1ms P3 0ms 8ms 8ms 
+P5 4ms P3, P5  0ms 4ms 4ms 
+P2 5ms P3, P5 2ms 2ms 0ms 
+At time  = 11,  
+ The execution of Process P2 will be done.
+ The burst time of P3 and P5 is compared.  Process P5 is executed because its burst time is lower than P3.
+Time 
+Instance  Process  Arrival 
+Time  Waiting 
+Table  Execution 
+Time  Initial Burst 
+Time  Remaining 
+Burst   
+Time  
+11-15ms  P3 1ms P3 0ms 8ms 8ms 
+P5 4ms P3 4ms 4ms 0ms 
+At time  = 15, 
+ Process P5 will finish its execution. Time 
+Instance  Process  Arrival 
+Time  Waiting 
+Table  Execution 
+Time  Initial Burst 
+Time  Remaining 
+Burst   
+Time  
+15-23ms  P3 1ms 
+ 8ms 8ms 0ms 
+  Prepared by J.BENITA,AP/CSE,KARE  
+ 
+At time  = 23,  
+ Process P3 will finish its execution.  The overall execution of the processes will be as shown below:  
+Time 
+Instance  Process  Arrival 
+Time  Waiting 
+Table  Execution 
+Time  Initial Burst 
+Time  Remaining 
+Burst   
+Time  
+0-1ms P4 0ms 
+ 1ms 3ms 2ms 
+1-2ms P4 0ms 
+ 1ms 2ms 1ms 
+P3 1ms P3 0ms 8ms 8ms 
+2-3ms P4 0ms 
+ 1ms 1ms 0ms 
+P3 1ms P3 0ms 8ms 8ms 
+P1 2ms P3, P1  0ms 6ms 6ms 
+3-4ms P3 1ms P3 0ms 8ms 8ms 
+P1 2ms P3 1ms 6ms 5ms 
+4-5ms P3 1ms P3 0ms 8ms 8ms 
+P1 2ms P3 1ms 5ms 4ms 
+P5 4ms P3, P5  0ms 4ms 4ms 
+5-6ms P3 1ms P3 0ms 8ms 8ms 
+  Prepared by J.BENITA,AP/CSE,KARE  
+ 
+Time 
+Instance  Process  Arrival 
+Time  Waiting 
+Table  Execution 
+Time  Initial Burst 
+Time  Remaining 
+Burst   
+Time  
+P1 2ms P3 1ms 4ms 3ms 
+P5 4ms P3, P5  0ms 4ms 4ms 
+P2 5ms P3, P5, P2  0ms 2ms 2ms 
+6-9ms P3 1ms P3 0ms 8ms 8ms 
+P1 2ms P3 3ms 3ms 0ms 
+P5 4ms P3, P5  0ms 4ms 4ms 
+P2 5ms P3, P5, P2  0ms 2ms 2ms 
+9-11ms  P3 1ms P3 0ms 8ms 8ms 
+P5 4ms P3, P5  0ms 4ms 4ms 
+P2 5ms P3, P5 2ms 2ms 0ms 
+11-15ms  P3 1ms P3 0ms 8ms 8ms 
+P5 4ms P3 4ms 4ms 0ms 
+15-23ms  P3 1ms 
+ 8ms 8ms 0ms 
+Gantt  chart  for above  execution:  
+  Prepared by J.BENITA,AP/CSE,KARE  
+ 
+ 
+Gantt chart  
+Now, let’s calculate the average waiting time for above example:  
+P4 = 0 – 0 = 0  
+P1 = 3 – 2 = 1  
+P2 = 9 – 5 = 4  
+P5 = 11 – 4 = 7  
+P3 = 15 – 1 = 14  
+Average  Waiting  Time  = 0 + 1 + 4 + 7 + 14/5 = 26/5 = 5.2 
+ 
+Advantages  of SJF:  
+ SJF is better than the  First come  first serve  (FCFS) algorithm as it reduces the average waiting 
+time.
+ SJF is generally used for long term scheduling  
+ It is suitable for the jobs running in batches, where run times are already known.
+ SJF is probably optimal in terms of average turnaround time.
+Disadvantages  of SJF:   
+ SJF may cause very long turn -around times or  starvation .
+ In SJF job completion time must be known earlier, but sometimes it is hard to predict.
+ Sometimes, it is complicated to predict the length of the upcoming CPU request.
+ It leads to the starvation that does not reduce average turnaround time.
+Round Robin Scheduling for the same Arrival time  
+Round  Robin  is a CPU  scheduling  algorithm  where  each process  is cyclically  assigned  a fixed  
+time slot.
+It is the preemptive  version  of the First come  First Serve  CPU  Scheduling  algorithm.
+ Round  Robin  CPU  Algorithm  generally  focuses  on Time  Sharing  technique.
+ The period  of time for which  a process  or job is allowed  to run in a pre-emptive  method  is 
+called  time quantum .
+Prepared by J.BENITA,AP/CSE,KARE  
+ 
+ Each  process  or job present  in the ready  queue  is assigned  the CPU  for that time quantum,  if 
+the execution  of the process  is completed  during  that time then the process  will end else the 
+process  will go back to the waiting  table and wait for its next turn to complete  the execution.
+Characteristics  of Round  Robin  CPU  Scheduling  Algorithm  
+ It is simple,  easy to implement,  and starvation -free as all processes  get a fair share  of CPU.
+ One of the most  commonly  used techniques  in CPU  scheduling  is a core.
+ It is preemptive  as processes  are assigned  CPU  only for a fixed  slice of time at most.
+ The disadvantage  of it is more  overhead  of context  switching.
+Advantages  of Round  Robin  CPU  Scheduling  Algorithm  
+ There  is fairness  since  every  process  gets an equal  share  of the CPU.
+ The newly  created  process  is added  to the end of the ready  queue.
+ A round -robin  scheduler  generally  employs  time-sharing,  giving  each job a time slot or 
+quantum.  While  performing  a round -robin  scheduling,  a particular  time quantum  is allotted  to different  
+jobs.  Each  process  get a chance  to reschedule  after a particular  quantum  time in this scheduling.
+Disadvantages  of Round  Robin  CPU  Scheduling  Algorithm  
+ There  is Larger  waiting  time and Response  time.
+ There  is Low throughput.
+ There  is Context  Switches.
+ Gantt  chart  seems  to come  too big (if quantum  time is less for scheduling.
+For Example:1  ms 
+for big scheduling.)
+ Time  consuming  scheduling  for small  quantum.
+Examples  to show  working  of Round  Robin  Scheduling  Algorithm  
+Example -1: Consider  the following  table  of arrival  time and burst  time for four processes  P1, 
+P2, P3, and P4 and given  Time  Quantum  = 2 
+Process  Burst  Time  Arrival  Time  
+P1 5 ms 0 ms 
+P2 4 ms 1 ms 
+  Prepared by J.BENITA,AP/CSE,KARE  
+ 
+Process  Burst  Time  Arrival  Time  
+P3 2 ms 2 ms 
+P4 1 ms 4 ms 
+The Round  Robin  CPU  Scheduling  Algorithm  will work  on the basis  of steps  as mentioned  
+below:  
+At time  = 0, 
+ The execution  begins  with process  P1, which  has burst  time 5.
+ Here,  every  process  executes  for 2 milliseconds  (Time  Quantum  Period ).
+P2 and P3 are still 
+in the waiting  queue.
+Time  
+Instance  Process  Arrival  
+Time  Ready  
+Queue  Running  
+Queue  Execution  
+Time  Initial  
+Burst  
+Time  Remaining  
+Burst   
+Time  
+0-2ms P1 0ms P2, P3 P1 2ms 5ms 3ms 
+At time  = 2, 
+ The processes  P1 and P3 arrives  in the ready  queue  and P2 starts  executing  for TQ period  
+Time  
+Instance  Process  Arrival  
+Time  Ready  
+Queue  Running  
+Queue  Execution  
+Time  Initial  
+Burst  Time  Remaining  
+Burst   
+Time  
+2-4ms P1 0ms 
+P3, P1 P2 0ms 3ms 3ms 
+P2 1ms 2ms 4ms 2ms 
+At time  = 4, 
+ The process  P4 arrives  in the ready  queue ,  
+ Then  P3 executes  for TQ period. Prepared by J.BENITA,AP/CSE,KARE  
+ 
+Time  
+Instance  Process  Arrival  
+Time  Ready  
+Queue  Running  
+Queue  Execution  
+Time  Initial  
+Burst  Time  Remaining  
+Burst   
+Time  
+4-6ms P1 0ms 
+P1, 
+P4, P2 P3 0ms 3ms 3ms 
+P2 1ms 0ms 2ms 2ms 
+P3 2ms 2ms 2ms 0ms 
+At time  = 6, 
+ Process  P3 completes  its execution  
+ Process  P1 starts  executing  for TQ period  as it is next in the b. Time  
+Instance  Process  Arrival  
+Time  Ready  
+Queue  Running  
+Queue  Execution  
+Time  Initial  
+Burst  Time  Remaining  
+Burst   
+Time  
+6-8ms P1 0ms 
+P4, P2 P1 2ms 3ms 1ms 
+P2 1ms 0ms 2ms 2ms 
+ 
+At time  = 8, 
+ Process  P4 starts  executing,  it will not execute  for Time  Quantum  period  as it has burst  time 
+= 1 
+ Hence,  it will execute  for only 1ms. Time  
+Instance  Process  Arrival  
+Time  Ready  
+Queue  Running  
+Queue  Execution  
+Time  Initial  
+Burst  Time  Remaining  
+Burst   
+Time  
+8-9ms P1 0ms P2, P1 P4 0ms 3ms 1ms 
+  Prepared by J.BENITA,AP/CSE,KARE  
+ 
+Time  
+Instance  Process  Arrival  
+Time  Ready  
+Queue  Running  
+Queue  Execution  
+Time  Initial  
+Burst  Time  Remaining  
+Burst   
+Time  
+P2 1ms 0ms 2ms 2ms 
+P4 4ms 1ms 1ms 0ms 
+At time  = 9, 
+ Process  P4 completes  its execution  
+ Process  P2 starts  executing  for TQ period  as it is next in the ready  queue  
+Time  
+Instance  Process  Arrival  
+Time  Ready  
+Queue  Running  
+Queue  Execution  
+Time  Initial  
+Burst  Time  Remaining  
+Burst   
+Time  
+9-11ms  P1 0ms 
+P1 P2 0ms 3ms 1ms 
+P2 1ms 2ms 2ms 0ms 
+At time  = 11, 
+ Process  P2 completes  its execution.  Process  P1 starts  executing,  it will execute  for 1ms only 
+ 
+ 
+Time  
+Instance  Process  Arrival  
+Time  Ready  
+Queue  Running  
+Queue  Execution  
+Time  Initial  
+Burst  
+Time  Remaining  
+Burst   
+Time  
+11-
+12ms  P1 0ms 
+ P1 1ms 1ms 0ms 
+At time  = 12, 
+  Prepared by J.BENITA,AP/CSE,KARE  
+ 
+ Process  P1 completes  its execution.  The overall  execution  of the processes  will be as shown  below:  
+Time  
+Instance  Process  Arrival  
+Time  Ready  
+Queue  Running  
+Queue  Execution  
+Time  Initial  
+Burst  Time  Remaining  
+Burst   
+Time  
+0-2ms P1 0ms P2, P3 P1 2ms 5ms 3ms 
+2-4ms P1 0ms 
+P3, P1 P2 0ms 3ms 3ms 
+P2 1ms 2ms 4ms 2ms 
+4-6ms P1 0ms 
+P1, 
+P4, P2 P3 0ms 3ms 3ms 
+P2 1ms 0ms 2ms 2ms 
+P3 2ms 2ms 2ms 0ms 
+6-8ms P1 0ms 
+P4, P2 P1 2ms 3ms 1ms 
+P2 1ms 0ms 2ms 2ms 
+8-9ms P1 0ms 
+P2, P1 P4 0ms 3ms 1ms 
+P2 1ms 0ms 2ms 2ms 
+P4 4ms 1ms 1ms 0ms 
+9-11ms  P1 0ms P1 P2 0ms 3ms 1ms 
+  Prepared by J.BENITA,AP/CSE,KARE  
+ 
+Time  
+Instance  Process  Arrival  
+Time  Ready  
+Queue  Running  
+Queue  Execution  
+Time  Initial  
+Burst  Time  Remaining  
+Burst   
+Time  
+P2 1ms 2ms 2ms 0ms 
+11-
+12ms  P1 0ms 
+ P1 1ms 1ms 0ms 
+Gantt  chart  will be as following  below:   
+ 
+Gantt chart for Round Robin Scheduling Algorithm  
+How  to Compute  Below  Times  in Round  Robin  Using  a Program?
+ Completion  Time:  Time  at which  process  completes  its execution.
+ Turn  Around  Time:  Time  Difference  between  completion  time and arrival  time. Turn  
+Around  Time  = Completion  Time  – Arrival  Time  
+ Waiting  Time(W.T):  Time  Difference  between  turn around  time and burst  time.
+Waiting  Time  = Turn  Around  Time  – Burst  Time  
+Now,  lets calculate  average  waiting  time and turn around  time:  
+Processes  AT BT CT TAT  WT 
+P1 0 5 12 12-0 = 12 12-5 = 7 
+P2 1 4 11 11-1 = 10 10-4 = 6 
+P3 2 2 6 6-2 = 4 4-2 = 2 
+P4 4 1 9 9-4 = 5 5-1 = 4 
+Now,   
+
+  Prepared by J.BENITA,AP/CSE,KARE  
+ 
+ Average  Turn  around  time = (12 + 10 + 4 + 5)/4 = 31/4 = 7.7 
+ Average  waiting  time = (7 + 6 + 2 + 4)/4 = 19/4 = 4.7 
+Example  2: Consider  the following  table  of arrival  time and burst  time for three  processes  P1, 
+P2 and P3 and given  Time  Quantum  = 2 
+Process  Burst  Time  Arrival  Time  
+ P1    10 ms 0 ms 
+ P2  5 ms 0 ms 
+ P3  8 ms 0 ms 
+Similarly,  Gantt  chart  for this example:  
+ 
+Gantt chart for example 2  
+Now,  lets calculate  average   waiting  time and turn around  time:  
+Processes  AT BT CT TAT  WT 
+P1 0 10 23 23-0 = 23 23-10 = 
+13 
+P2 0 5 15 15-0 = 15 15-5 = 10 
+P3 0 8 21 21-0 = 21 21-8 = 13 
+Total  Turn  Around  Time  = 59 ms 
+So, Average  Turn  Around  Time  = 59/3 = 19.667  ms 
+And,  Total  Waiting  Time  = 36 ms 
+So, Average  Waiting  Time  = 36/3 = 12.00  ms  
+
+  Prepared by J.BENITA,AP/CSE,KARE  
+ 
+Shortest Remaining Time First (SRTF) Scheduling Algorithm  
+This Algorithm is the  preemptive version  of SJF scheduling .
+In SRTF, the execution of the 
+process can be stopped after certain amount of time.
+At the arrival of every process, the short 
+term scheduler schedules the process with the least remaining burst time among the list of 
+available processes and the running process.
+Once all the processes are available in the  ready queue , No preemption will be done and the 
+algorithm will work as  SJF scheduling .
+The context of the process is saved in the  Process 
+Control Block  when the process  is removed from the execution and the next process is 
+scheduled.
+This PCB is accessed on the  next execution  of this process.
+Example  
+In this Example, there are five jobs P1, P2, P3, P4, P5 and P6.
+Their arrival time and burst 
+time are given below in the t able.
+Process 
+ID Arrival 
+Time  Burst 
+Time  Completion 
+Time  Turn 
+Around 
+Time  Waiting 
+Time  Response 
+Time  
+1 0 8 20 20 12 0 
+2 1 4 10 9 5 1 
+3 2 2 4 2 0 2 
+4 3 1 5 2 1 4 
+5 4 3 13 9 6 10 
+6 5 2 7 2 0 5 
+  Prepared by J.BENITA,AP/CSE,KARE  
+ 
+ 
+                    Avg Waiting Time = 24/6  
+Priority Scheduling  
+Priority  scheduling  is a non-preemptive  algorithm  and one of the most  common  scheduling  
+algorithms  in batch  systems.
+Each  process  is assigned  first arrival  time (less arrival  time 
+process  first)  if two processes  have same  arrival  time,  then compare  to priorities  (highest  
+process  first). Also,  if two processes  have same  priority  then compare  to process  number  
+(less process  number  first).
+This process  is repeated  while  all process  get executed.
+Implementation  –  
+1.
+First input  the processes  with their arrival  time,  burst  time and priority.
+2.
+First process  will schedule,  which  have  the lowest  arrival  time,  if two or more  processes  
+will have  lowest  arrival  time,  then whoever  has higher  priority  will schedule  first.
+3.
+Now  further  processes  will be schedule  according  to the arrival  time and priority  of the 
+process.
+(Here  we are assuming  that lower  the priority  number  having  higher  priority).
+If 
+two process  priority  are same  then sort according  to process  number.
+Note:  In the question,  They  will clearl y mention,  which  number  will have  higher  priority  
+and which  number  will have lower  priority.
+4.
+Once  all the processes  have been arrived,  we can schedule  them  based  on their priority.
+Prepared by J.BENITA,AP/CSE,KARE  
+ 
+ 
+Gantt  Chart  –

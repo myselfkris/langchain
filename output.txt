@@ -1,0 +1,538 @@
+title of the project
+A CAPSTONE PROJECT REPORT
+
+
+Submitted by
+
+In partial fulfilment for the award of the degree of
+BACHELOR OF TECHNOLOGY
+IN
+ELECTRONICS AND COMMUNICATION ENGINEERING
+
+
+Under the Guidance of 
+Dr. [NAME] M.E., Ph.D.
+
+
+
+
+DEPARTMENT OF ELECTRONICS AND COMMUNICATION ENGINEERING
+SCHOOL OF ELECTRONICS, ELECTRICAL AND BIOMEDICAL TECHNOLOGY
+KALASALINGAM ACADEMY OF RESEARCH AND EDUCATION
+KRISHNANKOIL
+
+
+MAY 2025
+
+
+KALASALINGAM ACADEMY OF RESEARCH AND EDUCATION
+SCHOOL OF ELECTRONICS, ELECTRICAL AND BIOMEDICAL TECHNOLOGY
+DEPARTMENT OF ELECTRONICS AND COMMUNICATION ENGINEERING
+
+DECLARATION
+
+This is to declare that this project is our original work. No part of this work has been submitted elsewhere partially or fully for the award of any other degree or diploma. Relevant previous works presented in this report have been properly acknowledged and cited. The plagiarism policy, as stated by the project guide and project coordinator, has been maintained.  
+
+
+
+
+Date: ______________
+
+
+KALASALINGAM ACADEMY OF RESEARCH AND EDUCATION
+SCHOOL OF ELECTRONICS, ELECTRICAL AND BIOMEDICAL TECHNOLOGY
+DEPARTMENT OF ELECTRONICS AND COMMUNICATION ENGINEERING
+
+BONAFIDE CERTIFICATE
+
+
+Certified that this capstone project report on “PROJECT TITLE” is the work of “STUDENT 1 (NUMBER 1), STUDENT 2 (NUMBER 2) & STUDENT 3 (NUMBER 3)” who worked under the guidance of “GUIDE NAME”.
+
+
+
+
+
+SIGNATURE									  SIGNATURE
+GUIDE NAME								    HoD NAME
+(PROJECT GUIDE)					   (HEAD OF THE DEPARTMENT)
+
+
+
+
+
+
+
+Submitted for the Capstone Project Viva-voce held on _______________
+
+
+
+
+
+
+
+INTERNAL EXAMINER					 EXTERNAL EXAMINER
+
+
+ACKNOWLEDGEMENT
+We express our profound gratitude to the Almighty for providing us with the strength and determination to successfully complete this project. 
+
+We take this opportunity to sincerely thank, “Illayavallal” Dr. K. Sridharan, Ph.D., Chancellor, Dr. S. Arivazhagi, M.B.B.S., Pro-Chancellor, Dr. S. Shasi Anand, Ph.D., Vice President, and Mr. S. Arjun Kalasalingam M.S., Vice President for their vision and guidance which continue to inspire all academic activities of our university.
+
+We extend our heartfelt thanks to our Vice-Chancellor, Dr. [Name], Ph.D., for the leadership and encouragement throughout our academic journey.
+
+We are deeply grateful to our Head of the Department, Dr. [Name], M.E., Ph.D., for the constant support, valuable suggestions, and encouragement in the completion of this project.
+
+We offer our sincerest gratitude to our guide Dr. ABC, M.E., Ph.D., for the patience, invaluable guidance, and continuous motivation, which greatly contributed to the successful execution of our work.
+
+We are extremely grateful to our Project Coordinator, Dr. ABC, M.E., Ph.D., for providing timely support and encouragement during the project.
+
+Finally, we wish to express our gratitude to our parents, faculty members, laboratory technicians, and friends for their moral support and assistance.
+
+
+ABSTRACT
+Start the abstract of the capstone project here. Abstract should contain the main work of the project in concise paragraph(s) and should not be more than one page but not less than half of a page. Do not cite references or use abbreviations in the abstract. You should use Times New Roman Font with 12 Font size. You should use Justify Paragraph option. You should use 2.0 Line Spacing. Do not use References, Symbols, Special Characters, Footnotes, or Math equations in the Abstract. Write few sentences from each of the following: introducing the topic, present status, methods followed, results acquired and impact/significance of the result.
+
+TABLE OF CONTENTS
+
+CONTENT										PAGE #
+ACKNOWLEDGEMENT	iii
+ABSTRACT	iv
+LIST OF TABLES	vii
+LIST OF FIGURES	viii
+LIST OF ABBREVIATIONS	ix
+CHAPTER 1 INTRODUCTION	1
+1.1	Background and Motivation	1
+1.2	Problem Statement	1
+1.3	Objectives and Outcomes	1
+1.4	Scope and Applications	1
+CHAPTER 2 STATE OF ART AND NEED	2
+2.1	Existing Research, Technologies or Products	2
+2.1.1	Research Literature	2
+2.1.2	Existing Technologies or Commercial Products	2
+2.1.3	Relevant Patents	2
+2.2	Gaps and Challenges in Existing Approaches	2
+2.3	Need for the Proposed Project	2
+CHAPTER 3 REQUIREMENTS AND CONSTRAINTS	3
+3.1	Requirements	3
+3.1.1	Functional Requirements	3
+3.1.2	Performance Requirements	3
+3.2	Engineering Standards and Codes	4
+3.3	Design Constraints	4
+3.3.1	Economic Constraints	5
+3.3.2	Environmental and Sustainability Constraints	5
+3.3.3	Manufacturability Constraints	5
+3.3.4	Ethical and Health & Safety Constraints	6
+3.3.5	Social Constraints	6
+3.3.6	Political/Regulatory Constraints	7
+3.4	Data Ethics and Management	7
+CHAPTER 4 DESIGN AND IMPLEMENTATION	8
+4.1	Concept Development and Alternatives	8
+4.1.1	Concept A – [Name/Title of Option]	8
+4.1.2	Concept B – [Name/Title of Option]	8
+4.1.3	Concept C – [Name/Title of Option]	8
+4.1.4	Evaluation Criteria	8
+4.2	Final Design and Justification	8
+4.2.1	Novelty of the Work	9
+4.2.2	IP Considerations	10
+4.2.3	Technology Readiness Level (TRL) Assessment	10
+4.3	System Architecture	10
+4.3.1	Subsystem 1	11
+4.3.2	Subsystem 2	11
+4.4	Implementation	11
+4.5	Project Management	11
+4.5.1	Work Breakdown Structure	11
+4.5.2	Gantt Chatt / Timeline	13
+4.5.3	Budget and Bill of Materials	14
+4.5.4	Risk Assessment	15
+CHAPTER 5 TESTING AND EVALUATION	17
+5.1	Test Plans and Procedure	17
+5.2	Results	17
+5.3	Evaluation Against Requirements	17
+CHAPTER 6 SUMMARY AND CONCLUSION	19
+6.1	Technical Achievements and Trade-offs	19
+6.2	Limitations	19
+6.3	Ethical and Professional Responsibilities	19
+6.4	Societal, Environmental and Safety Impacts	20
+6.5	Community Relevance	20
+6.6	Sustainability and Global Relevance	20
+6.6.1	SDG Indicators	21
+6.6.2	Relevancy of the SDG(s) to the work	21
+6.7	Business/Commercialization Potential	21
+6.8	Future Work Recommendations	22
+6.9	Conclusion	22
+REFERENCES	23
+APPENDICES	24
+APPENDIX A	25
+APPENDIX B	26
+
+
+LIST OF TABLES
+
+
+Table 3.1 Summary of Requirements	4
+Table 4.1 Comparison of Alternative Solutions	9
+Table 4.2 Trade-off Analysis of Design Alternatives	9
+Table 4.3 A Sample Work Breakdown Table	12
+Table 4.4 Team Responsibility Matrix	12
+Table 4.5 Gantt Chart	13
+Table 4.6 Budget of the Project	15
+Table 4.7 Risk Assessment Matrix of Project	16
+Table 5.1 Traceability Matrix	17
+Table 6.1 SDG Measurable Indicators	21
+Table A.1 Standards Compliance for the Project	25
+Table B.1 Ethical and Professional Considerations	26
+
+
+The list should be prepared with 1.5 line spacing and Times New Roman Font of size 12
+
+LIST OF FIGURES
+
+
+Figure 4.1 Sample Figure for System Architecture	10
+Figure 4.2 Sample Process Chart for Software	11
+Figure 4.3 A Sample Work Breakdown Structure	12
+Figure 4.4 Gantt Chart	14
+Figure 4.5 Risk Matrix	15
+
+
+The list should be prepared with 1.5 line spacing and Times New Roman Font of size 12
+
+LIST OF ABBREVIATIONS
+
+
+The table (no borders) should be prepared with Times New Roman Font of size 12
+
+
+
+INTRODUCTION
+Background and Motivation
+[Describe the background and motivation of the project. For an automatic depression prediction project, the students can write about depression, various types of depression, the consequences of depression, relevant facts about depression with statistics, etc. with proper references and relevant figures. Students can write why depression should be diagnosed early [1] (project motivation). The references can be cited in IEEE format.]
+Problem Statement
+[State in clear, concise terms the specific problem this project addresses. For example, in an automatic depression prediction project, describe how current approaches (e.g., self-report questionnaires, clinical interviews) are limited by subjectivity, accessibility, or cost. Highlight the gap that motivates your design (e.g., “There is no reliable, real-time, and low-cost method to detect early signs of depression using everyday data sources”). The statement should be narrow enough to be solvable within the scope of a capstone project, and it should directly connect to the objectives in the next subsection. Use supporting evidence and cite references in IEEE format.]
+Objectives and Outcomes
+[Clearly state the specific aims and deliverables of the project. For an automatic depression prediction project, the students can write that the objective is to design and implement a predictive system capable of identifying depression levels using non-invasive data sources (e.g., speech, text, physiological signals, or sensor data). The objectives should be measurable (e.g., achieve a target accuracy, sensitivity, or specificity), time-bound (achievable within the project duration), and aligned with the identified problem statement. If applicable, list primary objectives (core functions the system must deliver) and secondary objectives (additional features or performance enhancements). References may be used sparingly in IEEE format if specific benchmarks or prior targets are cited.]
+Scope and Applications
+[Define the boundaries of the project — what will be covered and what will not. For an automatic depression prediction project, students can specify the scope, such as developing a machine learning model trained on publicly available datasets, implementing a prototype software tool for prediction, and validating its accuracy through simulations or controlled testing. They should also state the applications.]
+
+
+STATE OF ART AND NEED
+Existing Research, Technologies or Products
+[Present a comprehensive review of the state of the art relevant to the project. This should include:
+Research literature: Summarize key academic studies, methods, and findings in the field (e.g., AI-based depression prediction models, clinical screening methods).
+Existing technologies or commercial products: Discuss currently available tools, devices, or software solutions, outlining their features, costs, and limitations.
+Relevant patents: Highlight any patented technologies that show how the problem is currently being addressed in industry and identify opportunities to innovate without infringement.
+Use proper IEEE citations for research articles and patents. Include comparative tables or figures where useful to contrast multiple approaches. The goal is to demonstrate that the team understands the current landscape before proposing their own solution.]
+Research Literature
+This section is compulsory
+Existing Technologies or Commercial Products
+This section is compulsory.
+Relevant Patents
+This section is optional.
+Gaps and Challenges in Existing Approaches
+[Discuss the weaknesses, shortcomings, or challenges in current methods. For example: existing depression screening methods are subjective, costly, or lack real-time capability. Many AI-based studies rely on limited datasets or fail to consider diverse populations. This section should lead logically to why a new solution is needed. Use evidence and cite sources in IEEE format.]
+Need for the Proposed Project
+[Summarize why this project is necessary, based on the gaps identified in the previous section. For an automatic depression prediction project, students can explain that existing diagnostic methods are limited (e.g., time-consuming, subjective, or costly), while existing AI models often lack real-world validation, scalability, or accessibility. They should highlight how these shortcomings create a pressing need for a new solution. This section should not describe the final design (that comes in Chapter 4) but should establish the justification for undertaking the project itself. Where possible, use supporting statistics, references, or standards in IEEE format to strengthen the argument.]
+
+REQUIREMENTS AND CONSTRAINTS
+Requirements
+Functional Requirements
+This section will outline the specific functional expectations of the project. It will describe the core features, logic operations, algorithms, and system behaviours that must be implemented to ensure the design achieves its intended purpose. Each requirement will be measurable, verifiable, and directly linked to the project objectives. This must be based on the chapter 1 objectives and outcomes, existing work [with proper citations].
+🔹 Definition:
+Describe what the system must do. These are the core operations or features that define the expected behaviour of the design.
+🔹 Nature:
+Binary: either satisfied or not.
+Tied to correctness and logic.
+Directly linked to the project’s objectives/algorithm.
+🔹 Example for a CNTFET-Reversible Multiplier project:
+The system must multiply two 8-bit inputs and produce a 16-bit output.
+The design must implement the Urdhva-Tiryagbhyam multiplication sutra.
+Reversible logic gates (Feynman, Fredkin, Toffoli, MUF) must be used.
+The circuit must be synthesizable and verifiable in simulation tools.
+Performance Requirements
+This section will define the quantitative expectations for the system’s efficiency and robustness. It will outline measurable parameters such as speed, power consumption, hardware area, and reliability. These requirements ensure that the design is not only functionally correct but also optimized for practical use under different operating conditions. This must be based on the chapter 1 objectives and outcomes, existing work [with proper citations].
+
+🔹 Definition:
+Describe how well the system performs its functions. These are quantitative measures or constraints that define efficiency, speed, power, and other performance-related aspects.
+🔹 Nature:
+Measured on a scale or range (not just yes/no).
+Often compared against benchmarks.
+Tied to optimization and design quality.
+🔹 Example for a CNTFET-Reversible Multiplier project:
+Maximum propagation delay should be less than X ns.
+Power consumption should be less than Y μW.
+Hardware area should not exceed Z logic blocks/gates.
+Circuit should maintain accuracy across voltage ranges of A–B V.
+
+The following Table 3.1 lists the summary of requirements of our project [Citations is compulsory for this table].
+Table 3.1 Summary of Requirements
+
+Engineering Standards and Codes
+[List the applicable standards, regulations, or codes that must be followed.
+For hardware: IEEE, ISO, ASTM, IEC, FDA, or safety standards (e.g., ISO 10993 for biocompatibility).
+For software: ISO/IEC 25010 (software quality), coding standards, data privacy/security standards (e.g., HIPAA, GDPR if handling medical data).
+Explain briefly how each standard will influence the design choices. Use IEEE citation style where references are available.]
+Design Constraints
+[Discuss the realistic constraints that the project must operate under. These should cover economic, environmental, sustainability, manufacturability, ethical, health & safety, social, and political factors. For each, either:
+Write a short, project-specific 3–5 sentences (if applicable), Be specific about how each affects this project. (or)
+State clearly “Not directly applicable to this project but considered” (so evaluators see you thought about it).
+Example:
+A software-only project may not have manufacturability constraints → just note “No hardware manufacturing involved; constraint not applicable.”
+A hardware biomedical project will have strong safety and ethical constraints → must be described in detail.]
+Economic Constraints
+[Discuss cost limits for components, software licenses, prototyping, and testing. Example: “The total hardware budget must not exceed ₹25,000.”
+Software-only:
+Project must use open-source libraries and student license software to minimize costs. Cloud deployment should fit within free-tier usage limits. No paid datasets will be purchased.
+Hardware-only:
+Total component cost must remain under ₹XX,000. Preference is given to locally available parts to reduce procurement cost. Manufacturing processes (PCB fabrication, 3D printing) must fit within lab resources.
+Hybrid:
+Hardware cost is capped at ₹XX,000 and software tools should rely on open-source frameworks (Python, TensorFlow, Arduino IDE). The budget allocation must cover both hardware procurement and software deployment.]
+Environmental and Sustainability Constraints
+[Explain environmental considerations such as recyclability, power consumption, e-waste, or sustainable materials. Example: “The system should consume <5W of power to ensure energy efficiency.”
+Software-only:
+Cloud computing energy use should be minimized by optimizing algorithms. Data storage must avoid unnecessary redundancy. The software will be designed to run on low-power devices when possible.
+Hardware-only:
+Materials selected should be recyclable (e.g., aluminium casing, RoHS-compliant components). Device power consumption must remain below X watts to reduce energy use.
+Hybrid:
+Software efficiency reduces processing load, lowering device battery drain. Hardware uses low-power ICs and recyclable materials. Together, the system supports sustainability by reducing energy and e-waste.]
+Manufacturability Constraints
+[Describe challenges related to fabrication, assembly, or sourcing components. Example: “The PCB must use only components available from local suppliers.”
+Software-only:
+Software must be compatible with widely available hardware (PCs, Android/iOS devices). Deployment should require no specialized or costly platforms.
+Hardware-only:
+The design must be realizable with common lab equipment. PCB layout should follow standard manufacturing guidelines. Components should be through-hole or surface-mount types available locally.
+Hybrid:
+Software should integrate with microcontrollers (Arduino, Raspberry Pi) that are easily sourced. Hardware must allow repeatable assembly with student-accessible tools.]
+Ethical and Health & Safety Constraints
+Address issues such as user privacy, ethical responsibility, informed consent, user safety, or bias in algorithms. Example: Collected data must be anonymized to protect patient identity.” 
+Ethical → protecting user privacy, preventing bias in algorithms, obtaining informed consent for data use.
+Safety → ensuring the hardware poses no electrical, thermal, or mechanical hazards; software avoids harmful recommendations. Explain how relevant standards (e.g., ISO 13485 for medical devices, IEC 62353 for electrical safety, GDPR/HIPAA for data privacy) apply to your project. If risks are minimal, explicitly state this.
+Software-only:
+Data privacy must be ensured (anonymization of user inputs, GDPR/HIPAA compliance if medical data is used). Algorithms must avoid bias against demographic groups.
+Example:
+In this project, speech data collected from participants was anonymized and stored in an encrypted local drive. Only processed feature sets (MFCC coefficients) were used for training. Compliance with GDPR principles was ensured by removing personal identifiers.
+Hardware-only:
+Device must comply with electrical safety standards (low-voltage operation <12V). Materials contacting users (e.g., biomedical sensors) must be biocompatible. No sharp edges or overheating allowed.
+Hybrid:
+Hardware must meet electrical and physical safety requirements, while software ensures secure data handling and unbiased predictions. Together, the system must protect both user safety and ethical responsibility.]
+Social Constraints
+[Explain how cultural, accessibility, or usability factors shape the design. Example: “The interface should support multiple languages for inclusivity.”
+Software-only:
+User interface must be accessible (multilingual support, font sizes for visually impaired). System should avoid stigmatization (neutral wording in reports).
+Hardware-only:
+Device form factor must be comfortable and socially acceptable (wearable design, lightweight). Design should avoid invasive procedures.
+Hybrid:
+Combined system must be user-friendly and culturally sensitive. Hardware must be comfortable, while software output must be easy to interpret and not stigmatizing.]
+Political/Regulatory Constraints
+[Note any government regulations, approvals, or policies affecting deployment. Example: “Deployment in healthcare settings must comply with national medical device regulations.”
+Software-only:
+Compliance with data protection regulations (GDPR, HIPAA). No use of blacklisted or non-licensed APIs. Deployment must respect local internet/data laws.
+Hardware-only:
+If intended for healthcare, the device must follow local medical device regulations. Export-controlled components (if any) must not be used.]
+Hybrid:
+Hardware follows safety/medical regulations; software follows privacy/data laws. Deployment in a healthcare or public environment requires meeting both sets of compliance requirements.]
+Data Ethics and Management
+Only for Projects which use a dataset.
+Data Collection: All datasets used in this project were obtained from [public repositories/surveys/experiments] with appropriate permissions. Any personal/health data collection followed informed consent procedures.
+Data Privacy: Sensitive data was anonymized before processing. Identifiable attributes (e.g., names, IDs, health markers) were removed or masked.
+Data Storage and Security: Project data was stored in [encrypted/local/secured cloud] systems with access restricted to team members.
+Compliance: The project followed applicable standards such as GDPR, HIPAA, IEEE Code of Ethics for handling sensitive data.
+Data Sharing: Processed datasets, source code, and results are shared in the appendices/GitHub repository, ensuring reproducibility and transparency.
+
+
+DESIGN AND IMPLEMENTATION
+Concept Development and Alternatives
+[In this section, describe the different design alternatives (minimum 3 alternatives) considered before finalizing the project solution. Each alternative should be presented with a short description, its potential advantages, and possible drawbacks. This must be based on the chapter 1 objectives and outcomes, chapter 2 existing work and chapter 3 functional, performance requirements [with proper citations].]
+Concept A – [Name/Title of Option]
+[Briefly describe this option, e.g., “A questionnaire-based mobile app, in which users self-report symptoms.” Mention its strengths (low cost, easy deployment) and weaknesses (subjective results, user compliance issues).]
+Concept B – [Name/Title of Option]
+[Describe this option, e.g., “A multimodal AI model using speech and text analysis for depression prediction.” Strengths: higher accuracy, real-time monitoring. Weaknesses: requires more data, higher computational load.]
+Concept C – [Name/Title of Option]
+[Describe this option, e.g., “A wearable physiological sensor that tracks heart rate variability and activity patterns.” Strengths: objective, continuous data collection. Weaknesses: hardware cost, user compliance with wearing device.]
+Evaluation Criteria
+[The alternatives will be evaluated using a set of criteria relevant to the project:
+Cost – affordability of development and deployment.
+Feasibility – ease of implementation within project resources and timeline.
+Accuracy/Performance – ability to meet functional and performance requirements.
+Compliance with Standards – alignment with relevant safety, privacy, or technical standards.
+These criteria will be applied in Section 4.2 to systematically compare and justify the final design choice.]
+Final Design and Justification
+[In this section, present the final design choice and explain why it was selected over the alternatives described in Section 4.1. Use a decision matrix or trade-off table to compare alternatives against the chosen evaluation criteria. Clearly identify the alternative that best satisfies the functional requirements, constraints, and standards defined in Chapter 3. Example:]
+Table 4.1 or Table 4.2 (Any one table is enough) compares the three proposed alternatives against the evaluation criteria of cost, feasibility, accuracy, and compliance with standards. Based on the comparison, Concept B achieved the highest overall score. This option balances performance and feasibility while maintaining compliance with relevant standards, making it the most appropriate choice for the project. Therefore, Concept C was selected as the final design for further development.
+Table 4.1 Comparison of Alternative Solutions
+Table 4.2 Trade-off Analysis of Design Alternatives
+Novelty of the Work
+[Explain what is unique about this project compared to existing research, technologies, or products. Highlight whether novelty lies in the algorithm, architecture, materials, integration, application domain, or deployment method. Use references to existing work to justify originality. Example:]
+The proposed system introduces [unique technical feature], which is not found in current solutions.
+Unlike existing approaches that rely on [method/technology], this design integrates [new method/combination].
+The novelty lies in adapting [technique] for [new application domain], addressing a gap identified in Chapter 2.
+IP Considerations
+[Discuss potential for intellectual property generation and protection. This may include patents, copyrights, or trade secrets. Students should reflect on whether their solution could qualify for a patent or design registration. Example:]
+The design has potential for patent filing under the category of [hardware/software/process].
+Patentability was evaluated by reviewing existing patents (see Section 2.1.3). No direct overlaps were found with the core novelty.
+If commercialized, the developed [device/model/software] can be protected through copyright/software registration.
+Technology Readiness Level (TRL) Assessment
+Based on the implementation and testing performed, this project currently corresponds to TRL 4 (validation of components in a lab environment). Further work such as [field trials / scaling / certification] is required to progress toward TRL 6 and beyond.
+System Architecture
+[Provide a high-level block diagram of the entire system. Break the system into major subsystems (e.g., data acquisition, processing, storage, interface). For each subsystem, briefly describe:
+Function (what it does)
+Inputs and outputs
+Interfaces with other subsystems
+For hardware → subsystems might be power supply, sensor unit, signal processing board
+For software → subsystems might be data preprocessing, machine learning model, user interface.
+For hybrid → combine both views.
+Figures are to be centre aligned.]
+
+Figure 4.1 Sample Figure for System Architecture
+
+Figure 4.2 Sample Process Chart for Software
+Subsystem 1
+Explanation
+Subsystem 2
+Explanation
+Implementation
+[Detail how the design was realized.
+Hardware projects → schematics, PCB layouts, CAD drawings, fabrication process, assembly steps.
+Software projects → UML diagrams, algorithms, coding standards, database schema, key modules.
+Hybrid projects → explain both, with focus on hardware–software integration (interfaces, protocols, data flow).
+Include relevant figures, source code snippets (in Appendix for full code), and test-build photos. Keep this section factual: show what was built.]
+Project Management
+[Provide evidence of structured project execution.
+Work Breakdown Structure (WBS): Tree or table showing division of tasks and team responsibilities.
+Gantt Chart / Timeline: Planned vs. actual progress across milestones.
+Budget and Bill of Materials: List all costs (hardware components, software licenses, cloud usage fees).
+Risk Assessment: Identify risks (technical, financial, schedule), probability, impact, and mitigation strategies.
+This section proves the team handled the project professionally.]
+Work Breakdown Structure
+[Either Fig. 4.3 or Table  4.3 – Anyone is enough for the breakdown structure, followed by the table of responsible persons. The table or figure can be placed sideways (landscape) if needed. Table 4.4 is a must one]
+
+Figure 4.3 A Sample Work Breakdown Structure
+Table 4.3 A Sample Work Breakdown Table
+Table 4.4 Team Responsibility Matrix
+
+
+Gantt Chatt / Timeline
+[Since the Gantt chart covers 15 weeks it can be very wide, therefore in this example it is placed on its own page and turned sideways. There are various forms for a Gantt chart (table or figure), choose the form that is suitable for the size and complexity of your project.
+Discuss the Gantt chart here.]
+Table 4.5 or Figure 4.4 – Anyone is enough.
+Table 4.5 Gantt Chart
+
+
+
+Figure 4.4 Gantt Chart
+Budget and Bill of Materials
+[List all costs (hardware components, software licenses, cloud usage fees).]
+
+Table 4.6 Budget of the Project
+Risk Assessment
+[Identify the major risks that could affect the project’s success. Categorize risks as technical, financial, or schedule related. For each risk, assess the probability (Low/Medium/High), the impact (Low/Medium/High), and describe mitigation strategies (what actions the team will take to minimize the risk). Present the risks in a table for clarity. 
+Figure 4.5 Risk Matrix is compulsory at the start. 
+Example content:]
+
+Figure 4.5 Risk Matrix
+Risk assessment was conducted to identify potential challenges that might affect project execution. As shown in Table 4.7, three major risks were identified: one technical, one financial, and one schedule related. Each risk was evaluated for probability and impact, and mitigation strategies were proposed. For example, the risk of the AI model not achieving the desired accuracy was considered medium probability and high severity. To mitigate this, the team plans to expand the training dataset and explore multiple model architectures. Similarly, budget risks will be controlled by prioritizing low-cost hardware, and schedule risks will be minimized through weekly progress tracking and task parallelization. This proactive approach ensures that project risks are managed systematically.
+
+Table 4.7 Risk Assessment Matrix of Project
+
+
+TESTING AND EVALUATION
+Test Plans and Procedure
+[Describe the strategy for testing the system. List the types of tests that were planned and how they will be executed.
+For hardware projects → include bench testing, load testing, endurance testing, environmental testing (if relevant).
+For software projects → include unit testing, integration testing, system testing, validation against datasets.
+For hybrid projects → include interface testing between hardware and software, end-to-end system validation.
+Provide enough detail so that another team could replicate the tests. If standards or regulatory guidelines define specific test methods, cite them here.]
+Results
+[Present the test results clearly using tables, graphs, and figures.
+Show both raw data (summarized) and processed results.
+For software → performance metrics such as accuracy, sensitivity, specificity, precision, F1-score, latency.
+For hardware → measured values (voltage, speed, temperature, etc.), plotted vs. expected ranges.
+For hybrid → combined performance (e.g., wearable sensor input processed by software and output prediction accuracy).
+Results should be compared against baseline or literature values where possible.]
+Evaluation Against Requirements
+[Link the test results directly back to the requirements defined in Chapter 3. Use a traceability matrix to show whether each requirement has been met.]
+Table 5.1 Traceability Matrix
+
+Testing was conducted in accordance with the plan outlined in Section 5.1. The results are summarized in Table 5.X and compared against the requirements in Table 5.Y (Traceability Matrix). Out of the four primary requirements, three were successfully met, while one (power consumption < 5 W) was partially unmet. This evaluation confirms that the system meets its functional and performance objectives in most areas, with minor improvements required in energy efficiency. The results validate the feasibility of the proposed design and demonstrate compliance with standards where applicable.
+
+SUMMARY AND CONCLUSION
+This chapter presents the overall discussion of the project outcomes and their broader implications. It highlights the technical achievements, ethical and professional responsibilities, societal and environmental impacts, and sustainability considerations. The limitations of the current work are acknowledged, and recommendations for future improvements are provided. Finally, the chapter concludes with a summary of how the project meets its stated objectives and contributes to engineering practice.
+Technical Achievements and Trade-offs
+[Summarize the main technical outcomes of the project. Highlight what worked well, key innovations, and technical milestones achieved. Discuss lessons learned during design and implementation (e.g., challenges with integration, dataset limitations, hardware failures, coding bugs). Example:]
+The project successfully achieved its primary objectives by developing a multimodal AI system capable of predicting depression levels with an accuracy of 87%. Hardware–software integration was validated through end-to-end testing. One of the key lessons learned was the importance of preprocessing speech signals to reduce noise, which significantly improved model performance. Additionally, the team realized that iterative prototyping of subsystems helped reduce integration issues later in the project.
+Limitations
+[Clearly state the limitations of the current project. Example: “The dataset used was small and not diverse enough to cover all demographics.” or “The hardware prototype was tested only in lab conditions, not in real-world environments.” Being transparent about limitations shows maturity and academic honesty.]
+While the system achieved high accuracy in controlled settings, the dataset used for training was relatively small and lacked diversity across age groups and cultural backgrounds. Hardware testing was limited to lab simulations and did not include field trials. In addition, the prototype focused on functionality rather than ergonomics, leaving aspects such as comfort and user experience untested. These limitations restrict the immediate real-world deployment of the system.
+Ethical and Professional Responsibilities
+[Discuss how the project addressed ethical and professional issues. This must correlate results with the constraints said in Chapter 3. Examples:
+Software → bias mitigation in algorithms, user privacy, secure data handling.
+Hardware → user safety, biocompatibility, safe voltages, device reliability.
+Hybrid → ethical use of data + hardware safety.
+Explain how ethical standards (IEEE Code of Ethics, GDPR, HIPAA, ISO standards) were applied. Section explains professional awareness beyond just technical design. Example:]
+Ethical considerations were central to the project since it involved sensitive mental health data. All datasets used were anonymized to protect participant privacy, in compliance with GDPR guidelines. The team also ensured that the AI model was evaluated for demographic fairness to minimize algorithmic bias. From a professional standpoint, the design adhered to IEEE software development standards, and documentation was maintained to support reproducibility and transparency.
+Societal, Environmental and Safety Impacts
+(Applicable constraints only. This must correlate results with the constraints said in Chapter 3.)
+[Describe how the project impacts society, environment, and safety. Examples:
+Positive → early diagnosis of depression improves public health; wearable sensors encourage healthy monitoring.
+Environmental → low power use reduces energy footprint; recyclable components reduce e-waste.
+Safety → safe electrical operation, privacy safeguards protect user wellbeing.
+This section shows students can consider the broader consequences of their design.]
+The proposed system has the potential to positively impact society by enabling early detection of depression, thereby reducing long-term healthcare costs and improving quality of life. Environmentally, the system is designed to run on low-power processors, minimizing energy consumption. Safety was addressed by ensuring that wearable sensors operate at safe voltage levels and by incorporating encryption protocols to protect sensitive health data during transmission.
+Community Relevance
+[Explain the local/regional/national community that benefits from the project.]
+Target Group: The project is intended to benefit [farmers/patients/students/industry workers/local residents].
+Direct Beneficiaries: Approximately [number] individuals/households/institutions could adopt this solution.
+Accessibility: Designed for [rural/urban/low-cost/high-tech] deployment.
+Inclusivity: Special provisions made for [disabled users, underprivileged communities, women empowerment, etc.].
+Example:
+This project supports rural farmers by providing a low-cost crop disease detection tool. In a pilot community of 50 farmers, it can reduce pesticide use by 20%, lowering input costs and improving income stability.
+Sustainability and Global Relevance
+[Discuss the long-term sustainability of the design. Can it be scaled up? Is it cost-effective for deployment in low-resource settings? Is it globally relevant, or adaptable to different populations? Address how the design supports sustainable development goals (SDGs) if applicable.]
+SDG Indicators
+The work aligns with the following Sustainable Development Goals (SDGs):
+SDG 7: Affordable and Clean Energy – through designs that lower power consumption and reduce energy wastage in electronic systems.
+SDG 9: Industry, Innovation, and Infrastructure – by exploring advanced device technologies (CNTFETs) and reversible computing methods that can shape future industrial innovations in electronics.
+SDG 12: Responsible Consumption and Production – by focusing on energy-efficient multipliers that reduce thermal stress and potentially lower electronic waste in the long run.
+Relevancy of the SDG(s) to the work
+The relevance of these SDGs can be seen directly in the outcomes of the project. The reduction in power consumption supports sustainable energy use (SDG 7). The integration of CNTFETs with reversible logic shows innovation in circuit design (SDG 9). By reporting results transparently and highlighting the trade-offs between area and power, the project reflects responsible engineering practice (SDG 12).
+Table 6.1 SDG Measurable Indicators
+
+Business/Commercialization Potential
+[This section evaluates how the developed project can be translated from a student prototype into a real-world product or service.]
+Target Market: The primary beneficiaries of this project would be [user group, e.g., small-scale farmers/healthcare providers/IoT consumers].
+Value Proposition: Compared to existing solutions, the proposed system offers [lower cost, higher accuracy, portability, sustainability, ease of use].
+Cost and Affordability: The prototype cost is approximately ₹. If produced in bulk, the estimated per-unit cost could be reduced to ₹, making it competitive in [specific market segment].
+Scalability: The design uses [open-source tools / readily available components / modular software], which ensures easy replication and adaptation for broader use.
+Commercial Pathway: This project can be taken forward through [incubation centre/start-up funding/patent licensing] and has the potential to reach [local/national/global markets].
+Risks & Barriers: Deployment would require [certification, regulatory clearance, further testing] before large-scale commercialization.
+Future Work Recommendations
+(Optional section)
+[Suggest future improvements or next steps. Example: “Expand dataset size, integrate multimodal data sources, test prototype in clinical trials, optimize hardware for lower power consumption.” These recommendations should logically follow from the limitations above. This section shows evaluators that the students understand the project’s evolution path.]
+Future work should focus on expanding the dataset with more diverse participants to improve model generalizability. The hardware design can be optimized for lower power consumption and miniaturization to improve wearability. Additional features such as real-time feedback to users and integration with clinical systems should be explored. Field trials in collaboration with healthcare providers are recommended to validate the system under real-world conditions.
+Conclusion
+In conclusion, this project successfully addressed the problem of [state problem briefly] by developing a [state solution briefly]. The system met most of its functional and performance requirements, incorporated relevant standards, and considered multiple realistic constraints. Beyond technical outcomes, the project demonstrated ethical responsibility, societal relevance, and sustainability potential. While some limitations remain, the recommendations outlined provide a clear roadmap for future work. Overall, the project serves as a strong example of a capstone design experience that integrates engineering knowledge with professional practice.
+
+REFERENCES
+(IEEE FORMAT)
+
+APPENDICES
+Standards Compliance Table (for NAAC, NBA, ABET)
+Ethical & Professional Responsibility Worksheet (for ABET)
+Source code snippets (not full code, but modules) (GitHub/OSF repositories for NAAC, NBA, ABET)
+Bill of materials / Software List (for ABET, NBA)
+Plagiarism Report (Turnitin/Urkund certificate – for NAAC)
+Innovation Outputs (Hackathons, Patents, Competitions, Entrepreneurship/start-up – for NBA, ABET)
+Research Outputs (Publications, Conference posters – for NAAC)
+
+Additional Data as per the requirements/need of the project
+
+
+Table A.1 Standards Compliance for the Project
+
+
+
+Table B.1 Ethical and Professional Considerations
+
+This worksheet is flexible:
+For software-only projects → emphasize data ethics, coding standards, fairness.
+For hardware-only projects → emphasize safety, biocompatibility, manufacturing ethics.
+For hybrid projects → combine both.
